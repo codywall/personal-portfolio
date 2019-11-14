@@ -1,1 +1,1 @@
-www.codywall.netlify.com
+https://codywall.netlify.com/
