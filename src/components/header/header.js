@@ -1,53 +1,37 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import styled from 'styled-components'
+import { Link } from 'gatsby';
+import React from 'react';
+import styled from '@emotion/styled';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      display: `flex`,
-      justifyContent: `space-between`,
-      alignContent: `center`,
-      overflow: `hidden`,
-      position: `fixed`,
-      top: `0`,
-      width: `100vw`,
-      zIndex: `499`,
-      backgroundColor: `#0471a6`,
-      paddingBottom: `8px`,
-      height: `68px`,
-      transition: `0.3s`,
-    }}
-  >
+const Logo = styled(Link)`
+  text-decoration: 'none';
+  font-family: 'house slant', sans-serif;
+  font-weight: 400;
+  font-style: 'normal';
+  color: #f0c564;
+  font-size: 1.8em;
+  margin: 12px 0 0 5vw;
+  line-height: 0.85em;
+`;
 
-    <a style={{ margin: 0 }}>
-      <Link
-        to="/"
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-          //     fontFamily: house - slant, sans- serif;
-          // fontWeight: 400;
-          // fontStyle: normal;
-          // color: #F0C564;
-          // font-size: 1.8em;
-          // margin: 12px 0 0 5vw;
-          // line-height: .85em;
-        }}
-      >
-        {siteTitle}
-      </Link>
-    </a>
-  </header >
-)
+const HeaderWrapper = styled('div')`
+  display: 'flex';
+  justify-content: 'space-between';
+  align-content: 'center',
+  overflow: 'hidden',
+  position: 'fixed',
+  top: 0,
+  width: 100vw,
+  z-index: 499,
+  background-color: #0471a6,
+  padding-bottom: 8px,
+  height: 68px,
+  transition: 0.3s,
+`;
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const Header = () => (
+  <HeaderWrapper>
+    <Logo to="/">Cody Wall</Logo>
+  </HeaderWrapper>
+);
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;
