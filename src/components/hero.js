@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Img from 'gatsby-image';
+import graphql from 'gatsby';
+import device from '../utils/breakpoints';
 
 const HeroWrapper = styled('div')`
   background-color: #0471a6;
@@ -22,6 +25,11 @@ const HeroHeadline = styled('h1')`
   font-size: 1.6em;
   font-weight: 800;
   line-height: 1.4em;
+
+  @media ${device.tablet} {
+    margin-top: 50px;
+    font-size: 2.5em;
+  }
 `;
 
 const Accent = styled('span')`
@@ -46,28 +54,22 @@ const HeroOverlay = styled('div')`
   z-index: 3;
 `;
 
-const HeroImage = styled('img')`
+const HeroImage = styled(Img)`
   position: absolute;
   bottom: -10vh;
   width: 100vw;
   height: auto;
   margin-left: 10vw;
   opacity: 0.66;
+
+  @media ${device.mobileL} {
+    width: auto;
+    max-height: 800px;
+    right: -10px;
+  }
 `;
 
-/* <div id="landing__wrapper">
-<div id="landing__text--wrapper">
-    <h1 id="landing__headline">Hi, I’m <span class="accent">Cody Wall</span>.<br>
-        I am a web <span class="accent">developer</span> <br>& user interface
-        <span class="accent">designer</span>. </h1>
-    <h3 id="landing__body">I am a Communication Design senior at CSUMB.<br></h3>
-</div>
-<div id="landing__overlay">
-    <img id="landing__image" src="img/cody-headshot_transparent.png" alt="headshot of cody">
-</div>
-</div> */
-
-const Hero = () => (
+const Hero = props => (
   <HeroWrapper>
     <HeroTextWrapper>
       <HeroHeadline>
@@ -80,9 +82,26 @@ const Hero = () => (
       <HeroBody>I am a Communication Design senior at CSUMB.</HeroBody>
     </HeroTextWrapper>
     <HeroOverlay>
-      <HeroImage />
+      <HeroImage fluid={props.data.childImageSharp.fluid} alt="headshot" />
     </HeroOverlay>
   </HeroWrapper>
 );
 
 export default Hero;
+
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`;
+
+export const query = graphql`
+query {
+  headshot: file(relativePath: { eq: "headshot.png" }) {
+    ...fluidImage
+  }
+`;
