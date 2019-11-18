@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Img from 'gatsby-image';
-import graphql from 'gatsby';
 import device from '../utils/breakpoints';
 
 const HeroWrapper = styled('div')`
@@ -81,27 +80,8 @@ const Hero = props => (
       </HeroHeadline>
       <HeroBody>I am a Communication Design senior at CSUMB.</HeroBody>
     </HeroTextWrapper>
-    <HeroOverlay>
-      <HeroImage fluid={props.data.childImageSharp.fluid} alt="headshot" />
-    </HeroOverlay>
+    <HeroOverlay>{/* <HeroImage alt="headshot" /> */}</HeroOverlay>
   </HeroWrapper>
 );
 
 export default Hero;
-
-export const fluidImage = graphql`
-  fragment fluidImage on File {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`;
-
-export const query = graphql`
-query {
-  headshot: file(relativePath: { eq: "headshot.png" }) {
-    ...fluidImage
-  }
-`;
