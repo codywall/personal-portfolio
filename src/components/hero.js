@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
+import headshot from '../images/headshot.png';
 import device from '../utils/breakpoints';
 
 const HeroWrapper = styled('div')`
@@ -53,7 +54,7 @@ const HeroOverlay = styled('div')`
   z-index: 3;
 `;
 
-const HeroImage = styled(Img)`
+const HeroImage = styled('img')`
   position: absolute;
   bottom: -10vh;
   width: 100vw;
@@ -68,20 +69,34 @@ const HeroImage = styled(Img)`
   }
 `;
 
-const Hero = props => (
+const Hero = () => (
   <HeroWrapper>
     <HeroTextWrapper>
       <HeroHeadline>
         Hi, I&apos;m
-        <Accent> Cody Wall</Accent>. I am a web
-        <Accent> developer</Accent>
-        <br />& user interface
-        <Accent> designer</Accent>.
+        <Accent> Cody</Accent>. This is a<Accent> test</Accent>
+        <br />
+        website built with
+        <Accent> React</Accent>.
       </HeroHeadline>
-      <HeroBody>I am a Communication Design senior at CSUMB.</HeroBody>
+      <HeroBody>Wish me luck.</HeroBody>
     </HeroTextWrapper>
-    <HeroOverlay>{/* <HeroImage alt="headshot" /> */}</HeroOverlay>
+    <HeroOverlay>
+      <HeroImage alt="headshot" src={headshot} />
+    </HeroOverlay>
   </HeroWrapper>
 );
 
 export default Hero;
+
+// export const query = graphql`
+//   query {
+//     fileName: file(relativePath: { eq: "images/headshot.png" }) {
+//       childImageSharp {
+//         fluid(maxWidth: 400, maxHeight: 250) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//   }
+// `;
