@@ -615,6 +615,10 @@ pre tt:before,
 pre tt:after {
   content: '';
 }
+@font-face {
+  font-family: 'HouseSlant';
+  src: local('HouseSlant'), url(../fonts/HouseSlant.woff) format('woff');
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

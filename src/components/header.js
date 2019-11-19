@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 const Logo = styled(Link)`
   text-decoration: none;
-  font-family: 'Mrs Sheppards', cursive;
+  font-family: 'HouseSlant', 'Mrs Sheppards', cursive;
   font-weight: 400;
   font-style: 'normal';
   color: #f0c564;
