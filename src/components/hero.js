@@ -48,21 +48,13 @@ const HeroBody = styled('h3')`
   max-width: 85vw;
 `;
 
-// const HeroOverlay = styled('div')`
-//   background-color: ${Colors.primary};
-//   opacity: 0.4;
-//   width: 100%;
-//   height: 100%;
-//   z-index: 3;
-// `;
-
 const HeroImage = styled(Img)`
   background-color: ${Colors.primary};
   opacity: 0.4;
-  width: 20% !important;
   height: auto;
   z-index: 3;
   position: static !important;
+
   picture img {
     max-width: 700px;
     bottom: -20vh;
@@ -73,8 +65,7 @@ const HeroImage = styled(Img)`
   @media ${device.mobileL} {
     width: auto;
     max-height: 800px;
-    margin-left: 10vw;
-    width: auto;
+    margin-left: 0;
   }
 `;
 
@@ -107,9 +98,7 @@ export default () => {
         </HeroHeadline>
         <HeroBody>Wish me luck.</HeroBody>
       </HeroTextWrapper>
-      {/* <HeroOverlay> */}
       <HeroImage fluid={data.file.childImageSharp.fluid} alt="headshot" />
-      {/* </HeroOverlay> */}
     </HeroWrapper>
   );
 };

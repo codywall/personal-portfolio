@@ -1,5 +1,3 @@
-import Colors from './src/utils/colors';
-
 module.exports = {
   siteMetadata: {
     title: `Cody Wall`,
@@ -25,8 +23,8 @@ module.exports = {
         name: `gatsby-portfolio`,
         short_name: `portfolio`,
         start_url: `/`,
-        background_color: Colors.primary,
-        theme_color: Colors.primary,
+        background_color: `#0471a6`,
+        theme_color: `#0471a6`,
         display: `fullscreen`,
         icon: `src/images/favicon-cody.png`
       }
