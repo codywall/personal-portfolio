@@ -1,3 +1,5 @@
+import Colors from './src/utils/colors';
+
 module.exports = {
   siteMetadata: {
     title: `Cody Wall`,
@@ -20,13 +22,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `gatsby-portfolio`,
+        short_name: `portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`
+        background_color: Colors.primary,
+        theme_color: Colors.primary,
+        display: `fullscreen`,
+        icon: `src/images/favicon-cody.png`
       }
     }
   ]
