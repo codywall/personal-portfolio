@@ -3,9 +3,10 @@ import styled from '@emotion/styled';
 // import Img from 'gatsby-image';
 import headshot from '../images/headshot.png';
 import device from '../utils/breakpoints';
+import Colors from '../utils/colors';
 
 const HeroWrapper = styled('div')`
-  background-color: #0471a6;
+  background-color: ${Colors.primary};
   max-width: 100vw;
   height: 78.5vh;
   z-index: 1;
@@ -21,7 +22,7 @@ const HeroTextWrapper = styled('div')`
 
 const HeroHeadline = styled('h1')`
   font-family: 'Montserrat', sans-serif;
-  color: #fdfdfd;
+  color: ${Colors.white};
   font-size: 1.6em;
   font-weight: 800;
   line-height: 1.4em;
@@ -33,12 +34,12 @@ const HeroHeadline = styled('h1')`
 `;
 
 const Accent = styled('span')`
-  color: #f0c564;
+  color: ${Colors.accent};
 `;
 
 const HeroBody = styled('h3')`
   font-family: 'Montserrat', sans-serif;
-  color: #fdfdfd;
+  color: ${Colors.white};
   font-weight: 300;
   font-size: 1.3em;
   line-height: 1.4em;
@@ -47,7 +48,7 @@ const HeroBody = styled('h3')`
 `;
 
 const HeroOverlay = styled('div')`
-  background-color: #0471a6;
+  background-color: ${Colors.primary};
   opacity: 0.43;
   width: 100%;
   height: 100%;
@@ -88,15 +89,3 @@ const Hero = () => (
 );
 
 export default Hero;
-
-// export const query = graphql`
-//   query {
-//     fileName: file(relativePath: { eq: "images/headshot.png" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 400, maxHeight: 250) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// `;
