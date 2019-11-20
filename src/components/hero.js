@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
-// import Img from 'gatsby-image';
-import headshot from '../images/headshot.png';
+import Img from 'gatsby-image';
+import { useStaticQuery, graphql } from 'gatsby';
+// import headshot from '../images/headshot.png';
 import device from '../utils/breakpoints';
 import Colors from '../utils/colors';
 
@@ -47,45 +48,68 @@ const HeroBody = styled('h3')`
   max-width: 85vw;
 `;
 
-const HeroOverlay = styled('div')`
+// const HeroOverlay = styled('div')`
+//   background-color: ${Colors.primary};
+//   opacity: 0.4;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 3;
+// `;
+
+const HeroImage = styled(Img)`
   background-color: ${Colors.primary};
-  opacity: 0.43;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-`;
-
-const HeroImage = styled('img')`
-  position: absolute;
-  bottom: -10vh;
-  width: 100vw;
+  opacity: 0.4;
+  width: 20% !important;
   height: auto;
-  margin-left: 10vw;
-  opacity: 0.66;
-
+  z-index: 3;
+  position: static !important;
+  picture img {
+    max-width: 700px;
+    bottom: -20vh;
+    height: auto;
+    margin-left: 40vw;
+    opacity: 0.66;
+  }
   @media ${device.mobileL} {
     width: auto;
     max-height: 800px;
-    right: -10px;
+    margin-left: 10vw;
+    width: auto;
   }
 `;
 
-const Hero = () => (
-  <HeroWrapper>
-    <HeroTextWrapper>
-      <HeroHeadline>
-        Hi, I&apos;m
-        <Accent> Cody</Accent>. This is a<Accent> test</Accent>
-        <br />
-        website built with
-        <Accent> React</Accent>.
-      </HeroHeadline>
-      <HeroBody>Wish me luck.</HeroBody>
-    </HeroTextWrapper>
-    <HeroOverlay>
-      <HeroImage alt="headshot" src={headshot} />
-    </HeroOverlay>
-  </HeroWrapper>
-);
+export default () => {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      file(relativePath: { eq: "headshot.png" }) {
+        childImageSharp {
+          fluid {
+            aspectRatio
+            base64
+            sizes
+            src
+            srcSet
+          }
+        }
+      }
+    }
+  `);
 
-export default Hero;
+  return (
+    <HeroWrapper>
+      <HeroTextWrapper>
+        <HeroHeadline>
+          Hi, I&apos;m
+          <Accent> Cody</Accent>. This is a<Accent> test</Accent>
+          <br />
+          website built with
+          <Accent> React</Accent>.
+        </HeroHeadline>
+        <HeroBody>Wish me luck.</HeroBody>
+      </HeroTextWrapper>
+      {/* <HeroOverlay> */}
+      <HeroImage fluid={data.file.childImageSharp.fluid} alt="headshot" />
+      {/* </HeroOverlay> */}
+    </HeroWrapper>
+  );
+};
