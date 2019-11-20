@@ -8,6 +8,11 @@ const ToolsWrapper = styled('div')`
   z-index: 4;
   position: relative;
   padding-bottom: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 
   @media ${device.tablet} {
     display: flex;
@@ -16,15 +21,20 @@ const ToolsWrapper = styled('div')`
 `;
 
 const ToolCard = styled('div')`
-  margin: 0 5vw 0 5vw;
+  margin: -10px 5vw 50px 5vw;
+  width: 90vw;
   background-color: ${Colors.white};
-  padding: 40px;
+  padding: 30px;
   border-radius: 5px;
   border: none;
   height: 100%;
+  z-index: 3;
 
   @media ${device.tablet} {
-    margin: 0;
+    width: 80vw;
+  }
+  @media ${device.laptop} {
+    width: 39vw;
   }
 `;
 
@@ -48,18 +58,15 @@ const ToolCard = styled('div')`
         </div> */
 const Tools = () => (
   <ToolsWrapper>
-    <ToolCard
-      style={{
-        position: 'relative',
-        top: '-3 vw'
-      }}
-    >
+    <ToolCard>
       <h2>Frontend Development</h2>
-      <p>dasfsdf sdafsd fsd fsdf safdawdsf da sd asdf df d sddfdas f</p>
+      <p>Using modern technologies to build fast, functional websites.</p>
+      <p> Responsive design with JavaScript, HTML, CSS, SASS, Wordpress, and Git</p>
     </ToolCard>
     <ToolCard>
       <h2>User Interface Design</h2>
-      <p>asdf ksjafljslkfjs saf;lsdjjsdajfjsk djflkssdjafks sj jss j j</p>
+      <p>Solving design problems with the end user and usability in mind.</p>
+      <p>Wireframes, prototypes, logos, and motion graphics with the Adobe Suite.</p>
     </ToolCard>
   </ToolsWrapper>
 );
