@@ -1,8 +1,7 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import styled from '@emotion/styled';
-import Img from 'gatsby-image';
-import { useStaticQuery, graphql } from 'gatsby';
-// import headshot from '../images/headshot.png';
+import headshot from '../images/headshot.png';
 import device from '../utils/breakpoints';
 import Colors from '../utils/colors';
 
@@ -48,57 +47,42 @@ const HeroBody = styled('h3')`
   max-width: 85vw;
 `;
 
-const HeroImage = styled(Img)`
+const HeroImageWrapper = styled('div')`
   background-color: ${Colors.primary};
   opacity: 0.4;
-  height: auto;
   z-index: 3;
-  position: static !important;
+`;
 
-  picture img {
-    max-width: 700px;
-    bottom: -20vh;
-    height: auto;
-    margin-left: 40vw;
-    opacity: 0.66;
-  }
-  @media ${device.mobileL} {
-    width: auto;
-    max-height: 800px;
-    margin-left: 0;
+const HeroImage = styled('img')`
+  position: absolute;
+  padding: 0;
+  opacity: 0.66;
+  margin: 0;
+  max-height: 70vh;
+  bottom: 0;
+
+  @media ${device.tablet} {
+    max-height: 750px;
+    margin-left: 50vw;
   }
 `;
 
-export default () => {
-  const data = useStaticQuery(graphql`
-    query MyQuery {
-      file(relativePath: { eq: "headshot.png" }) {
-        childImageSharp {
-          fluid {
-            aspectRatio
-            base64
-            sizes
-            src
-            srcSet
-          }
-        }
-      }
-    }
-  `);
+const Hero = () => (
+  <HeroWrapper>
+    <HeroTextWrapper>
+      <HeroHeadline>
+        Hi, I&apos;m
+        <Accent> Cody</Accent>. This is a<Accent> test</Accent>
+        <br />
+        website built with
+        <Accent> React</Accent>.
+      </HeroHeadline>
+      <HeroBody>Wish me luck.</HeroBody>
+    </HeroTextWrapper>
+    <HeroImageWrapper>
+      <HeroImage src={headshot} alt="headshot" />
+    </HeroImageWrapper>
+  </HeroWrapper>
+);
 
-  return (
-    <HeroWrapper>
-      <HeroTextWrapper>
-        <HeroHeadline>
-          Hi, I&apos;m
-          <Accent> Cody</Accent>. This is a<Accent> test</Accent>
-          <br />
-          website built with
-          <Accent> React</Accent>.
-        </HeroHeadline>
-        <HeroBody>Wish me luck.</HeroBody>
-      </HeroTextWrapper>
-      <HeroImage fluid={data.file.childImageSharp.fluid} alt="headshot" />
-    </HeroWrapper>
-  );
-};
+export default Hero;
