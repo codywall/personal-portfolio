@@ -3,6 +3,10 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Colors from '../utils/colors';
 
+const LogoWrapper = styled('div')`
+  margin: 10px;
+`;
+
 const Logo = styled(Link)`
   text-decoration: none;
   font-family: 'HouseSlant', 'Mrs Sheppards', cursive;
@@ -10,7 +14,6 @@ const Logo = styled(Link)`
   font-style: 'normal';
   color: ${Colors.accent};
   font-size: 1.6em;
-  margin: 0;
   line-height: 0.85em;
 `;
 
@@ -31,11 +34,13 @@ const HeaderWrapper = styled('div')`
 
 const Header = () => (
   <HeaderWrapper>
-    <Logo to="/">
-      Cody
-      <br />
-      Wall
-    </Logo>
+    <LogoWrapper>
+      <Logo to="/">
+        Cody
+        <br />
+        Wall
+      </Logo>
+    </LogoWrapper>
   </HeaderWrapper>
 );
 

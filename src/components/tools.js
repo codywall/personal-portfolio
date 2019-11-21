@@ -15,20 +15,20 @@ const ToolsWrapper = styled('div')`
   justify-content: center;
 
   @media ${device.tablet} {
-    display: flex;
-    flex: 1 1 0;
   }
 `;
 
 const ToolCard = styled('div')`
-  margin: -10px 5vw 50px 5vw;
+  margin: -10px 2.5vw 50px 2.5vw;
   width: 90vw;
+  min-height: 300px;
   background-color: ${Colors.white};
   padding: 30px;
   border-radius: 5px;
   border: none;
   height: 100%;
   z-index: 3;
+  box-shadow: 0 35px 50px -30px rgba(0, 0, 0, 0.2);
 
   @media ${device.tablet} {
     width: 80vw;
