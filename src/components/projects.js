@@ -13,8 +13,8 @@ const projects = [
     projectType: 'Musician Site',
     description:
       'Designed and developed a website for a local musician from scratch using HTML, CSS, SASS, and Javascript.',
-    url: 'www.lindseywallmusic.com',
-    githubUrl: 'www.github.com/codywall/lindseywall-site',
+    url: 'https://www.lindseywallmusic.com',
+    githubUrl: 'https://www.github.com/codywall/lindseywall-site',
     imgUrl: lindsey
   },
   {
@@ -22,8 +22,8 @@ const projects = [
     projectType: 'Personal Portfolio',
     description:
       'Rebuilt my personal portfolio using React and Gatsby. Used styled components etc.',
-    url: 'www.codywall.com',
-    githubUrl: 'www.github.com/codywall/gatsby-portfolio',
+    url: 'https://www.codywall.com',
+    githubUrl: 'https://www.github.com/codywall/gatsby-portfolio',
     imgUrl: cody
   }
 ];
@@ -70,29 +70,33 @@ const ProjectImage = styled('img')`
   position: absolute;
   bottom: -60px;
   height: 250%;
-  filter: blur(5px);
+  filter: blur(3px) grayscale(10%);
   width: auto;
   object-fit: cover;
 `;
 
-const ProjectHeadline = styled('h2')`
+const ProjectInfo = styled('div')`
+  z-index: 198;
+  display: flex;
+  flex-direction: column;
+  background-color: ${colors.primary};
+  box-shadow: 0 35px 50px -30px rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 30px;
-  right: 30px;
-  z-index: 199;
+  top: 0;
+  padding: 10px;
+  width: 100%;
+  height: 24%;
   color: ${colors.accent};
-  width: 60%;
-  font-size: 2.5em;
-  width: auto;
 `;
 
-const ProjectType = styled('h3')`
-  position: absolute;
-  top: 80px;
-  right: 30px;
+const ProjectHeadline = styled('h3')`
   z-index: 199;
-  color: ${colors.accent};
-  font-size: 1.5em;
+  margin: 2px 5px 5px 5px;
+`;
+
+const ProjectType = styled('h5')`
+  z-index: 199;
+  margin: 0 5px 5px 5px;
 `;
 
 const IconWrapper = styled('div')`
@@ -121,9 +125,11 @@ const Icon = styled('div')`
 
 const displayProjects = projects.map(project => (
   <ProjectCard key={project.name}>
-    <ProjectHeadline>{project.name}</ProjectHeadline>
-    <ProjectType>{project.projectType}</ProjectType>
     <ImgWrapper>
+      <ProjectInfo>
+        <ProjectHeadline>{project.name}</ProjectHeadline>
+        <ProjectType>{project.projectType}</ProjectType>
+      </ProjectInfo>
       <ProjectImage src={`${project.imgUrl}`} alt={`${project.name}`} />
     </ImgWrapper>
     <p>{project.description}</p>
