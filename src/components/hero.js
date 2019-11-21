@@ -3,10 +3,10 @@ import React from 'react';
 import styled from '@emotion/styled';
 import headshot from '../images/headshot.png';
 import device from '../utils/breakpoints';
-import Colors from '../utils/colors';
+import colors from '../utils/colors';
 
 const HeroWrapper = styled('div')`
-  background-color: ${Colors.primary};
+  background-color: ${colors.primary};
   max-width: 100vw;
   height: 88.5vh;
   z-index: 1;
@@ -22,7 +22,7 @@ const HeroTextWrapper = styled('div')`
 
 const HeroHeadline = styled('h1')`
   font-family: 'Montserrat', sans-serif;
-  color: ${Colors.white};
+  color: ${colors.white};
   font-size: 1.6em;
   font-weight: 800;
   line-height: 1.4em;
@@ -34,12 +34,12 @@ const HeroHeadline = styled('h1')`
 `;
 
 const Accent = styled('span')`
-  color: ${Colors.accent};
+  color: ${colors.accent};
 `;
 
 const HeroBody = styled('h3')`
   font-family: 'Montserrat', sans-serif;
-  color: ${Colors.white};
+  color: ${colors.white};
   font-weight: 300;
   font-size: 1.3em;
   line-height: 1.4em;
@@ -48,7 +48,7 @@ const HeroBody = styled('h3')`
 `;
 
 const HeroImageWrapper = styled('div')`
-  background-color: ${Colors.primary};
+  background-color: ${colors.primary};
   opacity: 0.4;
   z-index: 3;
 `;

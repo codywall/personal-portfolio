@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Colors from '../utils/colors';
+import colors from '../utils/colors';
 import device from '../utils/breakpoints';
 
 const ToolsWrapper = styled('div')`
@@ -22,7 +22,7 @@ const ToolCard = styled('div')`
   margin: -10px 2.5vw 50px 2.5vw;
   width: 90vw;
   min-height: 300px;
-  background-color: ${Colors.white};
+  background-color: ${colors.white};
   padding: 30px;
   border-radius: 5px;
   border: none;
