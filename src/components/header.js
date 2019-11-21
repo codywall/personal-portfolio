@@ -21,12 +21,10 @@ const HeaderWrapper = styled('div')`
   display: 'flex';
   justify-content: 'space-between';
   align-content: 'center';
-  overflow: 'hidden';
   position: 'fixed';
   top: 0;
   width: 100vw;
   z-index: 499;
-  background-color: ${Colors.primary};
   padding: 8px;
   height: 68px;
   transition: 0.3s;

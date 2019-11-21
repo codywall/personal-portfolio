@@ -8,9 +8,9 @@ import Colors from '../utils/colors';
 const HeroWrapper = styled('div')`
   background-color: ${Colors.primary};
   max-width: 100vw;
-  height: 78.5vh;
+  height: 88.5vh;
   z-index: 1;
-  position: relative;
+  position: sticky;
   overflow: hidden;
 `;
 
