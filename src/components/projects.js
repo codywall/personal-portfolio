@@ -48,6 +48,7 @@ const ProjectCard = styled('div')`
   align-items: center;
   justify-content: space-around;
   position: relative;
+  box-shadow: 0 35px 50px -30px rgba(0, 0, 0, 0.2);
 
   @media ${device.tablet} {
     max-width: 800px;
@@ -97,11 +98,24 @@ const ProjectType = styled('h3')`
 const IconWrapper = styled('div')`
   display: flex;
   fill: ${colors.primary};
+  justify-content: space-around;
+  width: 100%;
 
   a img {
-    fill: ${colors.primary};
     height: auto;
     width: 50px;
+  }
+`;
+
+const Icon = styled('div')`
+  display: flex;
+  align-items: center;
+  top: -10px;
+  justify-content: center;
+  text-align: center;
+
+  img {
+    margin-bottom: 10px;
   }
 `;
 
@@ -114,12 +128,18 @@ const displayProjects = projects.map(project => (
     </ImgWrapper>
     <p>{project.description}</p>
     <IconWrapper>
-      <a href={project.url}>
-        <img src={externalLink} alt="" />
-      </a>
-      <a href={project.githubUrl}>
-        <img src={github} alt="" />
-      </a>
+      <Icon>
+        <a href={project.githubUrl}>
+          <img src={github} alt="" />
+          <h5>Github</h5>
+        </a>
+      </Icon>
+      <Icon>
+        <a href={project.url}>
+          <img src={externalLink} alt="" />
+          <h5>Site Link</h5>
+        </a>
+      </Icon>
     </IconWrapper>
   </ProjectCard>
 ));
