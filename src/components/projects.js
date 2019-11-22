@@ -18,7 +18,7 @@ const projects = [
     imgUrl: lindsey
   },
   {
-    name: 'This website',
+    name: 'Cody Wall',
     projectType: 'Personal Portfolio',
     description:
       'Rebuilt my personal portfolio using React and Gatsby. Used styled components etc.',
@@ -82,7 +82,7 @@ const ProjectImage = styled('img')`
   position: absolute;
   bottom: -60px;
   height: 250%;
-  filter: blur(3px) grayscale(10%);
+  filter: blur(1px) brightness(75%);
   width: auto;
   object-fit: cover;
 `;
