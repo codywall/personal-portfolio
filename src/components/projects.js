@@ -82,7 +82,7 @@ const ProjectImage = styled('img')`
   position: absolute;
   bottom: -60px;
   height: 250%;
-  filter: blur(1px) brightness(75%);
+  filter: brightness(55%);
   width: auto;
   object-fit: cover;
 `;
