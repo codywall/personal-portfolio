@@ -82,8 +82,8 @@ const Hero = () => (
         <br />
       </HeroHeadline>
       <HeroBody>
-        I build websites using HTML, CSS, Javascript, and React to improve the web experience for
-        everyone.
+        I am a designer turned developer, building websites using modern frameworks and technologies
+        to improve the web experience for everyone. I am always looking for exciting projects!
       </HeroBody>
     </HeroTextWrapper>
     <HeroImageWrapper>

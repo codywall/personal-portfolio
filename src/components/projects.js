@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import lindsey from '../images/lindsey-preview.jpg';
+import cowells from '../images/cowells-preview.png';
 import cody from '../images/cody-preview.png';
 import github from '../images/icons/github-logo.svg';
 import externalLink from '../images/icons/link.svg';
@@ -9,19 +9,19 @@ import device from '../utils/breakpoints';
 
 const projects = [
   {
-    name: 'Lindsey Wall',
-    projectType: 'Musician Site',
+    name: "Cowell's Surf Shop",
+    projectType: 'Retail store website',
     description:
-      'Designed and developed a website for a local musician from scratch using HTML, CSS, SASS, and Javascript.',
-    url: 'https://www.lindseywallmusic.com',
-    githubUrl: 'https://www.github.com/codywall/lindseywall-site',
-    imgUrl: lindsey
+      'Currently building a website for a surf shop in Santa Cruz, CA. I am using React to pull surf report data from an API, and to pull content from a headless CMS.',
+    url: 'https://cowells-prismic.netlify.com/',
+    githubUrl: 'https://www.github.com/codywall/cowells-prismic',
+    imgUrl: cowells
   },
   {
     name: 'Cody Wall',
-    projectType: 'Personal Portfolio',
+    projectType: 'Personal portfolio',
     description:
-      'Rebuilt my personal portfolio using React and Gatsby. Used styled components etc.',
+      'Rebuilt my personal portfolio using React and Gatsby, in order to achieve faster loading times.',
     url: 'https://www.codywall.com',
     githubUrl: 'https://www.github.com/codywall/gatsby-portfolio',
     imgUrl: cody
