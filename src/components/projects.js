@@ -98,7 +98,7 @@ const ProjectInfo = styled('div')`
   padding: 10px;
   width: 100%;
   height: 24%;
-  color: ${colors.accent};
+  color: ${colors.white};
 `;
 
 const ProjectHeadline = styled('h3')`
@@ -109,6 +109,7 @@ const ProjectHeadline = styled('h3')`
 const ProjectType = styled('h5')`
   z-index: 199;
   margin: 0 5px 5px 5px;
+  font-size: 1rem;
 `;
 
 const IconWrapper = styled('div')`
