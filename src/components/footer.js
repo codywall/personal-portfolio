@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import colors from '../utils/colors';
+import device from '../utils/breakpoints';
 
 const FooterWrapper = styled('div')`
   background-color: ${colors.lightgrey};
@@ -29,6 +30,9 @@ const FooterCard = styled('div')`
   justify-content: space-around;
   position: relative;
   box-shadow: 0 35px 50px -30px rgba(0, 0, 0, 0.2);
+  @media ${device.laptop} {
+    width: 800px;
+  }
 `;
 
 const ContactLink = styled('a')`
@@ -52,7 +56,11 @@ const Footer = () => (
         >
           View My Resume
         </ContactLink>
-        <ContactLink class="contact__link button__link" href="mailto:cwall@csumb.edu">
+        <ContactLink
+          class="contact__link button__link"
+          rel="noreferrer"
+          href="mailto:cwall@csumb.edu"
+        >
           Send Me an Email
         </ContactLink>
       </FooterCard>

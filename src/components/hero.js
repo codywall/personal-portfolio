@@ -18,6 +18,12 @@ const HeroTextWrapper = styled('div')`
   margin-left: 2vw;
   padding: 11vh 0 0 4vw;
   z-index: 1;
+  @media ${device.tablet} {
+    width: 600px;
+  }
+  @media ${device.laptop} {
+    width: 800px;
+  }
 `;
 
 const HeroHeadline = styled('h1')`
