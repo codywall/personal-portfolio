@@ -51,16 +51,13 @@ const Footer = () => (
       <FooterCard>
         <ContactLink
           target="_blank"
+          rel="noreferrer"
           href="https://docs.google.com/document/d/1vrW6vmf0XC2tll5VKizhi4xFpwTtFgKXe1d8wJBCdO4/edit?usp=sharing"
           class=" contact__link button__link"
         >
           View My Resume
         </ContactLink>
-        <ContactLink
-          class="contact__link button__link"
-          rel="noreferrer"
-          href="mailto:cwall@csumb.edu"
-        >
+        <ContactLink class="contact__link button__link" href="mailto:cwall@csumb.edu">
           Send Me an Email
         </ContactLink>
       </FooterCard>
