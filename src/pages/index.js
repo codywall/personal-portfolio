@@ -4,6 +4,7 @@ import Tools from '../components/tools';
 import Projects from '../components/projects';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Footer from '../components/footer'
 
 const IndexPage = () => (
   <Layout>
@@ -11,7 +12,7 @@ const IndexPage = () => (
     <Hero />
     <Tools />
     <Projects />
-    {/* <Link to='/page-2/'>Go to page 2</Link> */}
+    <Footer />
   </Layout>
 );
 

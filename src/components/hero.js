@@ -72,12 +72,13 @@ const Hero = () => (
     <HeroTextWrapper>
       <HeroHeadline>
         Hi, I&apos;m
-        <Accent> Cody</Accent>. This is a<Accent> test</Accent>
+        <Accent> Cody Wall</Accent>. I am a front end<Accent> web developer</Accent>.
         <br />
-        website built with
-        <Accent> React</Accent>.
       </HeroHeadline>
-      <HeroBody>Wish me luck.</HeroBody>
+      <HeroBody>
+        I build websites using HTML, CSS, Javascript, and React to improve the web experience for
+        everyone.
+      </HeroBody>
     </HeroTextWrapper>
     <HeroImageWrapper>
       <HeroImage src={headshot} alt="headshot" />
