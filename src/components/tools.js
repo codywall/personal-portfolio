@@ -38,9 +38,12 @@ const ToolCard = styled('div')`
 const Tools = () => (
   <ToolsWrapper>
     <ToolCard>
-      <h2>Frontend Development</h2>
-      <p>Using modern technologies to build fast, functional websites.</p>
-      <p> Responsive design with JavaScript, HTML, CSS, SASS, Wordpress, and Git</p>
+      <h2>Frontend Web Development</h2>
+      <p>I use modern technologies to build fast, functional websites.</p>
+      <p>
+        {' '}
+        Responsive design with JavaScript, ReactJS, HTML, CSS, Styled Components, GatsbyJS and Git
+      </p>
     </ToolCard>
     <ToolCard>
       <h2>User Interface Design</h2>
