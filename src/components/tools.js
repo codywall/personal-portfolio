@@ -42,12 +42,12 @@ const Tools = () => (
       <p>I use modern technologies to build fast, functional websites.</p>
       <p>
         {' '}
-        Responsive design with JavaScript, ReactJS, HTML, CSS, Styled Components, GatsbyJS and Git
+        Responsive websites with JavaScript, ReactJS, HTML, CSS, Styled Components, GatsbyJS and Git
       </p>
     </ToolCard>
     <ToolCard>
       <h2>User Interface Design</h2>
-      <p>Solving design problems with the end user and usability in mind.</p>
+      <p>I solve design problems with usability and accessibility in mind.</p>
       <p>Wireframes, prototypes, logos, and motion graphics with the Adobe Suite.</p>
     </ToolCard>
   </ToolsWrapper>
