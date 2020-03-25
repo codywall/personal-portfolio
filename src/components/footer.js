@@ -28,8 +28,13 @@ const FooterCard = styled('div')`
   align-items: center;
   justify-content: space-around;
   position: relative;
+
   @media ${device.laptop} {
     width: 800px;
+  }
+
+  @media ${device.mobile} {
+    min-height: 150px;
   }
 `;
 
@@ -40,6 +45,11 @@ const ContactLink = styled('a')`
   font-size: 1.3em;
   align-self: center;
   color: ${colors.white};
+
+  @media ${device.mobile} {
+    width: 100%;
+    font-size: 1.1rem;
+  }
 `;
 
 const Footer = () => (
