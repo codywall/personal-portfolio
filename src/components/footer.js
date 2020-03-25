@@ -1,64 +1,58 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
+import { withPrefix } from 'gatsby';
 import styled from '@emotion/styled';
 import colors from '../utils/colors';
 import device from '../utils/breakpoints';
 
 const FooterWrapper = styled('div')`
-  background-color: ${colors.lightgrey};
+  display: 'flex';
+  justify-content: 'space-between';
+  align-content: 'center';
+  position: 'fixed';
+  top: 0;
   width: 100vw;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  z-index: 499;
+  padding: 8px;
+  height: 68px;
+  transition: 0.3s;
 `;
 
 const FooterCard = styled('div')`
   margin: -10px 2.5vw 50px 2.5vw;
   width: 90vw;
   min-height: 300px;
-  background-color: ${colors.white};
-  padding: 3vw;
-  border-radius: 5px;
-  border: none;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   position: relative;
-  box-shadow: 0 35px 50px -30px rgba(0, 0, 0, 0.2);
   @media ${device.laptop} {
     width: 800px;
   }
 `;
 
 const ContactLink = styled('a')`
-  border: 2px solid #0471a6;
   padding: 15px;
+  text-decoration: underline;
   width: 70%;
   font-size: 1.3em;
-  text-align: center;
   align-self: center;
+  color: ${colors.white};
 `;
 
 const Footer = () => (
   <div>
     <FooterWrapper>
-      <h2 style={{ flex: '0 0 100%', padding: '2vw 10vw', fontSize: '2em' }}>Contact Me</h2>
+      <h2 style={{ flex: '0 0 100%', padding: '2vw 10vw', fontSize: '2em', color: 'white' }}>
+        Contact me
+      </h2>
       <FooterCard>
-        <ContactLink
-          target="_blank"
-          rel="noreferrer"
-          href="https://docs.google.com/document/d/1vrW6vmf0XC2tll5VKizhi4xFpwTtFgKXe1d8wJBCdO4/edit?usp=sharing"
-          class=" contact__link button__link"
-        >
-          View My Resume
-        </ContactLink>
-        <ContactLink class="contact__link button__link" href="mailto:cwall@csumb.edu">
-          Send Me an Email
+        <ContactLink href="mailto:cwall@csumb.edu">Email me at cody.wall@gmail.com</ContactLink>
+        <ContactLink href="https://github.com/codywall">Check out my GitHub</ContactLink>
+        <ContactLink href={withPrefix('/resume_codywall.pdf')} rel="noreferrer">
+          View my resume
         </ContactLink>
       </FooterCard>
     </FooterWrapper>
