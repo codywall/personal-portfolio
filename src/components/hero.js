@@ -78,12 +78,13 @@ const Hero = () => (
     <HeroTextWrapper>
       <HeroHeadline>
         Hi, I&apos;m
-        <Accent> Cody Wall</Accent>. I am a front end<Accent> web developer</Accent>.
+        <Accent> Cody Wall</Accent>. I am a front end
+        <Accent> web developer</Accent> based out of Monterey, California.
         <br />
       </HeroHeadline>
       <HeroBody>
-        I am a designer turned developer, building websites using modern frameworks and technologies
-        to improve the web experience for everyone. I am always looking for exciting projects!
+        I love building websites using modern frameworks and technologies and improving the web
+        experience for everyone. I am always looking for exciting projects!
       </HeroBody>
     </HeroTextWrapper>
     <HeroImageWrapper>
