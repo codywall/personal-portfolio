@@ -24,6 +24,9 @@ const HeroTextWrapper = styled('div')`
   @media ${device.laptop} {
     width: 800px;
   }
+  @media ${device.mobile} {
+    padding: 20px 10px;
+  }
 `;
 
 const HeroHeadline = styled('h1')`
@@ -36,6 +39,9 @@ const HeroHeadline = styled('h1')`
   @media ${device.tablet} {
     margin-top: 50px;
     font-size: 2.5em;
+  }
+  @media ${device.mobile} {
+    margin-bottom: 10px;
   }
 `;
 
@@ -51,6 +57,11 @@ const HeroBody = styled('h3')`
   line-height: 1.4em;
   padding-top: 1vw;
   max-width: 85vw;
+
+  @media ${device.mobile} {
+    padding-top: 0;
+    font-size: 1rem;
+  }
 `;
 
 const HeroImageWrapper = styled('div')`
@@ -70,6 +81,9 @@ const HeroImage = styled('img')`
   @media ${device.tablet} {
     max-height: 750px;
     margin-left: 50vw;
+  }
+  @media ${device.mobile} {
+    bottom: -70px;
   }
 `;
 
