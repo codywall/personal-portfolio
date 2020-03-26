@@ -53,14 +53,18 @@ const HeroBody = styled('h3')`
   font-family: 'Montserrat', sans-serif;
   color: ${colors.white};
   font-weight: 300;
-  font-size: 1.3em;
-  line-height: 1.4em;
+  font-size: 1rem;
+  line-height: 1.5em;
   padding-top: 1vw;
   max-width: 85vw;
 
-  @media ${device.mobile} {
+  @media ${device.tablet} {
+    font-size: 1.3rem;
+  }
+
+  @media ${device.laptop} {
     padding-top: 0;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 `;
 
@@ -97,8 +101,8 @@ const Hero = () => (
         <br />
       </HeroHeadline>
       <HeroBody>
-        I love building websites using modern frameworks and technologies and improving the web
-        experience for everyone. I am always looking for exciting projects!
+        I love building websites using modern frameworks and technologies. I strive to improve the
+        web experience for everyone. I am always looking for exciting projects!
       </HeroBody>
     </HeroTextWrapper>
     <HeroImageWrapper>
