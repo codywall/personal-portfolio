@@ -101,7 +101,7 @@ const Hero = () => (
         <br />
       </HeroHeadline>
       <HeroBody>
-        I love building websites using modern frameworks and technologies. I strive to improve the
+        I love building websites using modern frameworks and technologies, and strive to improve the
         web experience for everyone. I am always looking for exciting projects!
       </HeroBody>
     </HeroTextWrapper>
