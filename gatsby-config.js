@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Cody Wall`,
-    description: `Cody Wall's personal portfolio, built with React using Gatsby.`,
+    description: `Cody Wall is a frontend web developer based out of the Monterey Bay Area.`,
     author: `@codywall`
   },
   plugins: [
