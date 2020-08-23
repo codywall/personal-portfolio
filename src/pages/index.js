@@ -5,7 +5,7 @@ import Tools from '../components/tools';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Footer from '../components/footer';
-import ProjectLink from '../components/projectLink';
+import Projects from '../components/Projects';
 
 const IndexPage = props => {
   const { data } = props;
@@ -16,9 +16,7 @@ const IndexPage = props => {
       <SEO title="Home" />
       <Hero />
       <Tools />
-      {allProjects.map(({ node }) => (
-        <ProjectLink key={node.id} post={node} summary={node.summary} />
-      ))}
+      <Projects projects={allProjects} />
       <Footer />
     </Layout>
   );
