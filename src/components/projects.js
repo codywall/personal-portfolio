@@ -139,11 +139,13 @@ const Icon = styled('div')`
 const displayProjects = projects.map(project => (
   <ProjectCard key={project.name}>
     <ImgWrapper>
-      <ProjectInfo>
-        <ProjectHeadline>{project.name}</ProjectHeadline>
-        <ProjectType>{project.projectType}</ProjectType>
-      </ProjectInfo>
-      <ProjectImage src={`${project.imgUrl}`} alt={`${project.name}`} />
+      <a href={project.url}>
+        <ProjectInfo>
+          <ProjectHeadline>{project.name}</ProjectHeadline>
+          <ProjectType>{project.projectType}</ProjectType>
+        </ProjectInfo>
+        <ProjectImage src={`${project.imgUrl}`} alt={`${project.name}`} />
+      </a>
     </ImgWrapper>
     <p>{project.description}</p>
     <IconWrapper>
