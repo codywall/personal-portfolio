@@ -60,7 +60,7 @@ const Footer = () => (
       </h2>
       <FooterCard>
         <ContactLink href="mailto:cwall@csumb.edu">Email me at cody.wall@gmail.com</ContactLink>
-        <ContactLink href="https://github.com/codywall">Check out my GitHub</ContactLink>
+        <ContactLink href="https://github.com/codywall">Check out my GitHub profile</ContactLink>
         <ContactLink href={withPrefix('/resume_codywall.pdf')} rel="noreferrer">
           View my resume
         </ContactLink>
