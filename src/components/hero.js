@@ -101,8 +101,9 @@ const Hero = () => (
         <br />
       </HeroHeadline>
       <HeroBody>
-        I love building websites using modern frameworks and technologies, and strive to improve the
-        web experience for everyone. I am always looking for exciting projects!
+        I am a Javascript Developer concentrated on front end frameworks such as React and the
+        JAMStack (Javascript, APIs & Markup). I&apos;m passionate about creating web experiences
+        that are intuitive and accessible.
       </HeroBody>
     </HeroTextWrapper>
     <HeroImageWrapper>
