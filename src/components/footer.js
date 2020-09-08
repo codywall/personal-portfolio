@@ -44,7 +44,7 @@ const ContactLink = styled('a')`
   width: 70%;
   font-size: 1.3em;
   align-self: center;
-  color: ${colors.white};
+  color: black;
 
   @media ${device.mobile} {
     width: 100%;

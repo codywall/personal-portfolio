@@ -6,7 +6,6 @@ import device from '../utils/breakpoints';
 import colors from '../utils/colors';
 
 const HeroWrapper = styled('div')`
-  background-color: ${colors.primary};
   max-width: 100vw;
   height: 88.5vh;
   z-index: 1;
@@ -31,7 +30,7 @@ const HeroTextWrapper = styled('div')`
 
 const HeroHeadline = styled('h1')`
   font-family: 'Montserrat', sans-serif;
-  color: ${colors.white};
+  color: black;
   font-size: 1.6em;
   font-weight: 800;
   line-height: 1.4em;
@@ -51,7 +50,7 @@ const Accent = styled('span')`
 
 const HeroBody = styled('h3')`
   font-family: 'Montserrat', sans-serif;
-  color: ${colors.white};
+  color: black;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5em;
@@ -69,7 +68,6 @@ const HeroBody = styled('h3')`
 `;
 
 const HeroImageWrapper = styled('div')`
-  background-color: ${colors.primary};
   opacity: 0.4;
   z-index: 3;
 `;
