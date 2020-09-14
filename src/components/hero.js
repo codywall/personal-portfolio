@@ -7,104 +7,98 @@ import colors from '../utils/colors';
 
 const HeroWrapper = styled('div')`
   max-width: 100vw;
-  height: 88.5vh;
-  z-index: 1;
-  position: sticky;
-  overflow: hidden;
+  display: flex;
 `;
 
 const HeroTextWrapper = styled('div')`
-  margin-left: 2vw;
-  padding: 11vh 0 0 4vw;
-  z-index: 1;
-  @media ${device.tablet} {
-    width: 600px;
-  }
-  @media ${device.laptop} {
-    width: 800px;
-  }
-  @media ${device.mobile} {
-    padding: 20px 10px;
-  }
-`;
-
-const HeroHeadline = styled('h1')`
-  font-family: 'Montserrat', sans-serif;
-  color: black;
-  font-size: 1.6em;
-  font-weight: 800;
-  line-height: 1.4em;
-
-  @media ${device.tablet} {
-    margin-top: 50px;
-    font-size: 2.5em;
-  }
-  @media ${device.mobile} {
-    margin-bottom: 10px;
-  }
-`;
-
-const Accent = styled('span')`
-  color: ${colors.accent};
-`;
-
-const HeroBody = styled('h3')`
-  font-family: 'Montserrat', sans-serif;
-  color: black;
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.5em;
-  padding-top: 1vw;
-  max-width: 85vw;
-
-  @media ${device.tablet} {
-    font-size: 1.3rem;
+    margin-left: 2vw;
+    padding: 11vh 0 0 4vw;
+    z-index: 1;
+    @media ${device.tablet} {
+      width: 600px;
+    }
+    @media ${device.laptop} {
+      width: 800px;
+    }
+    @media ${device.mobile} {
+      padding: 20px 10px;
+    }
   }
 
-  @media ${device.laptop} {
-    padding-top: 0;
-    font-size: 1.3rem;
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 1.6em;
+    font-weight: 800;
+    line-height: 1.4em;
+
+    @media ${device.tablet} {
+      margin-top: 50px;
+      font-size: 2.5em;
+    }
+    @media ${device.mobile} {
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5em;
+    padding-top: 1vw;
+    max-width: 85vw;
+
+    @media ${device.tablet} {
+      font-size: 1.3rem;
+    }
+
+    @media ${device.laptop} {
+      padding-top: 0;
+      font-size: 1.3rem;
+    }
+  }
+  .accent {
+    color: ${colors.primary};
   }
 `;
 
 const HeroImageWrapper = styled('div')`
-  opacity: 0.4;
-  z-index: 3;
-`;
+  background: ${colors.primary};
+  img {
+    padding: 0;
+    margin: 0;
+    max-height: 70vh;
 
-const HeroImage = styled('img')`
-  position: absolute;
-  padding: 0;
-  opacity: 0.66;
-  margin: 0;
-  max-height: 70vh;
-  bottom: 0;
-
-  @media ${device.tablet} {
-    max-height: 750px;
-    margin-left: 50vw;
-  }
-  @media ${device.mobile} {
-    bottom: -70px;
+    @media ${device.tablet} {
+      max-height: 750px;
+    }
+    @media ${device.mobile} {
+      bottom: -70px;
+    }
   }
 `;
 
 const Hero = () => (
   <HeroWrapper>
     <HeroTextWrapper>
-      <HeroHeadline>
-        Hi, I&apos;m
-        <Accent> Cody Wall</Accent>. I am a front end
-        <Accent> web developer</Accent> based out of Monterey, California.
-        <br />
-      </HeroHeadline>
-      <HeroBody>
+      <h1>
+        Hi!{' '}
+        <span role="img" aria-label="Wave emoji">
+          👋
+        </span>{' '}
+        I&apos;m
+        <span className="accent"> Cody Wall</span>. I am a front end
+        <span className="accent"> web developer</span> based out of Monterey, California.
+      </h1>
+      <p>
         I love building websites using modern frameworks and technologies, and strive to improve the
         web experience for everyone. I am always looking for exciting projects!
-      </HeroBody>
+      </p>
     </HeroTextWrapper>
     <HeroImageWrapper>
-      <HeroImage src={headshot} alt="headshot" />
+      <img src={headshot} alt="headshot" />
     </HeroImageWrapper>
   </HeroWrapper>
 );
