@@ -1,29 +1,39 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import styled from '@emotion/styled';
-import headshot from '../images/headshot.png';
 import device from '../utils/breakpoints';
 import colors from '../utils/colors';
 
 const HeroWrapper = styled('div')`
   max-width: 100vw;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-content: center;
   padding: 0 2vw;
+
+  @media ${device.tablet} {
+    margin: 50px 0;
+    flex-direction: column;
+  }
+
+  @media ${device.mobile} {
+    margin: 50px 0;
+    flex-direction: column;
+  }
 `;
 
 const HeroTextWrapper = styled('div')`
-    padding-top: 11vh;
-    z-index: 1;
-    @media ${device.tablet} {
-      width: 600px;
-    }
-    @media ${device.laptop} {
-      width: 800px;
-    }
-    @media ${device.mobile} {
-      padding: 20px 10px;
-    }
+  padding-top: 11vh;
+  z-index: 1;
+  @media ${device.tablet} {
+    width: 600px;
+  }
+  @media ${device.laptop} {
+    width: 800px;
+  }
+  @media ${device.mobile} {
+    padding: 20px 10px;
   }
 
   h1 {
@@ -34,7 +44,6 @@ const HeroTextWrapper = styled('div')`
     line-height: 1.4em;
 
     @media ${device.tablet} {
-      margin-top: 50px;
       font-size: 2.5em;
     }
     @media ${device.mobile} {
@@ -59,22 +68,9 @@ const HeroTextWrapper = styled('div')`
       padding-top: 0;
       font-size: 1.3rem;
     }
-  }
 
-  .accent {
-    color: ${colors.primary};
-  }
-`;
-
-const HeroImageWrapper = styled('div')`
-  background: ${colors.primary};
-  img {
-    padding: 0;
-    margin: 0;
-
-    @media ${device.tablet} {
-    }
-    @media ${device.mobile} {
+    .accent {
+      color: ${colors.primary};
     }
   }
 `;
@@ -96,9 +92,6 @@ const Hero = () => (
         web experience for everyone. I am always looking for exciting projects!
       </p>
     </HeroTextWrapper>
-    <HeroImageWrapper>
-      <img src={headshot} alt="headshot" />
-    </HeroImageWrapper>
   </HeroWrapper>
 );
 
