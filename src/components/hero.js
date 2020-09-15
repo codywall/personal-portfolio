@@ -8,11 +8,12 @@ import colors from '../utils/colors';
 const HeroWrapper = styled('div')`
   max-width: 100vw;
   display: flex;
+  justify-content: center;
+  padding: 0 2vw;
 `;
 
 const HeroTextWrapper = styled('div')`
-    margin-left: 2vw;
-    padding: 11vh 0 0 4vw;
+    padding-top: 11vh;
     z-index: 1;
     @media ${device.tablet} {
       width: 600px;
@@ -59,6 +60,7 @@ const HeroTextWrapper = styled('div')`
       font-size: 1.3rem;
     }
   }
+
   .accent {
     color: ${colors.primary};
   }
@@ -69,13 +71,10 @@ const HeroImageWrapper = styled('div')`
   img {
     padding: 0;
     margin: 0;
-    max-height: 70vh;
 
     @media ${device.tablet} {
-      max-height: 750px;
     }
     @media ${device.mobile} {
-      bottom: -70px;
     }
   }
 `;
