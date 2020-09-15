@@ -9,7 +9,7 @@ const HeroWrapper = styled('div')`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   padding: 0 2vw;
 
   @media ${device.tablet} {
@@ -33,7 +33,7 @@ const HeroTextWrapper = styled('div')`
     width: 800px;
   }
   @media ${device.mobile} {
-    padding: 20px 10px;
+    padding: 10px;
   }
 
   h1 {
