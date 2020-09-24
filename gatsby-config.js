@@ -35,13 +35,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-styled-components-dark-mode`,
-      options: {
-        light: `require(${__dirname}/src/utils/themes.js).lightTheme`,
-        dark: `require(${__dirname}/src/utils/themes.js).darkTheme`
-      }
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-portfolio`,
