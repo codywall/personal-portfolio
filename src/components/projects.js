@@ -6,7 +6,6 @@ import cody from '../images/cody-preview.png';
 import github from '../images/icons/github-logo.svg';
 import externalLink from '../images/icons/link.svg';
 import colors from '../utils/colors';
-import device from '../utils/breakpoints';
 
 const projects = [
   {
