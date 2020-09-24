@@ -7,7 +7,7 @@ const Line = styled('hr')`
   border-top: 3px solid ${colors.accent};
   background: none;
   margin: 3rem auto;
-  width: 60%;
+  width: 40%;
 `;
 
 export default Line;
