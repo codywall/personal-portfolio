@@ -5,7 +5,7 @@ import cowells from '../images/cowells-preview.png';
 import cody from '../images/cody-preview.png';
 import github from '../images/icons/github-logo.svg';
 import externalLink from '../images/icons/link.svg';
-import colors from '../utils/colors';
+import device from '../utils/breakpoints';
 
 const projects = [
   {
@@ -36,10 +36,14 @@ const ProjectCard = styled('div')`
   padding: 1rem;
 
   .icons-wrapper {
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    fill: ${colors.primary};
-    width: 50%;
+    width: 80%;
+
+    @media only screen and (${device.tablet}) {
+      width: 50%;
+    }
 
     a img {
       height: auto;
@@ -55,9 +59,7 @@ const Projects = () => (
     <h2>Recent projects</h2>
     {projects.map(project => (
       <ProjectCard key={project.name}>
-        <a href={project.url}>
-          <h3>{project.name}</h3>
-        </a>
+        <h3>{project.name}</h3>
         <p>{project.description}</p>
         <div className="icons-wrapper">
           <a href={project.githubUrl}>
