@@ -5,7 +5,7 @@ import device from '../utils/breakpoints';
 import colors from '../utils/colors';
 
 const HeroWrapper = styled('div')`
-  max-width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -24,18 +24,6 @@ const HeroWrapper = styled('div')`
 `;
 
 const HeroTextWrapper = styled('div')`
-  padding-top: 11vh;
-  z-index: 1;
-  @media ${device.tablet} {
-    width: 600px;
-  }
-  @media ${device.laptop} {
-    width: 800px;
-  }
-  @media ${device.mobile} {
-    padding: 10px;
-  }
-
   h1 {
     font-family: 'Montserrat', sans-serif;
     color: black;
