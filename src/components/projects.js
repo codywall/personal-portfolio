@@ -48,12 +48,12 @@ const ProjectCard = styled('div')`
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
 
-    a img {
-      height: auto;
-      width: 50px;
-      margin-bottom: 0.5rem;
+      img {
+        height: auto;
+        width: 50px;
+        margin-bottom: 0.5rem;
+      }
     }
   }
 `;
