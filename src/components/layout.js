@@ -13,8 +13,9 @@ import Header from './header';
 import './layout.css';
 
 const Main = styled('main')`
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto;
+  padding: 0 1rem;
 `;
 
 const Layout = ({ children }) => {
