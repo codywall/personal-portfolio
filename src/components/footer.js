@@ -1,49 +1,25 @@
+import styled from '@emotion/styled';
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { withPrefix } from 'gatsby';
-import styled from '@emotion/styled';
-import colors from '../utils/colors';
-import device from '../utils/breakpoints';
+import Line from './common/line';
 
-const FooterWrapper = styled('div')`
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  width: 100vw;
-  padding: 8px;
-  min-height: 68px;
+const Copyright = styled('h6')`
+  margin-top: 3rem;
+  font-weight: 200;
   text-align: center;
-
-  h2 {
-    flex: 0 0 100%;
-    padding-top: 2rem;
-    font-size: 2rem;
-    color: white;
-  }
-
-  a {
-    text-decoration: underline;
-    padding-bottom: 2rem;
-    font-size: 1.3em;
-    font-weight: 600;
-    color: ${colors.accent};
-
-    @media ${device.mobile} {
-      font-size: 1.1rem;
-    }
-  }
-`;
+`
 
 const Footer = () => (
-  <FooterWrapper>
-    <h2>Let&apos;s work together!</h2>
-    <a href="mailto:cwall@csumb.edu">cody.wall@gmail.com</a>
-    <a href="https://github.com/codywall">github.com/codywall</a>
-    <a href={withPrefix('/resume_codywall.pdf')} rel="noreferrer">
-      View my resume
-    </a>
-  </FooterWrapper>
+  <>
+    <Line/>
+    <h2>Get in touch with me</h2>
+    <p>
+      If you would like to learn more about me, feel free to connect with me on
+      <a href="https://linkedin.com/in/codycwall"> LinkedIn </a>
+      and follow me on <a href="https://github.com/codywall">GitHub</a>.
+    </p>
+    <Copyright>&#169;2020 Cody Wall</Copyright>
+  </>
 );
 
 export default Footer;

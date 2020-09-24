@@ -1,56 +1,21 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import colors from '../utils/colors';
-import device from '../utils/breakpoints';
-
-const ToolsWrapper = styled('div')`
-  background-color: #f2f7f8;
-  z-index: 4;
-  position: relative;
-  padding-bottom: 70px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-`;
-
-const ToolCard = styled('div')`
-  margin: -10px 2.5vw 50px 2.5vw;
-  width: 90vw;
-  min-height: 300px;
-  background-color: ${colors.white};
-  padding: 30px;
-  border-radius: 5px;
-  border: none;
-  height: 100%;
-  z-index: 3;
-  box-shadow: 0 35px 50px -30px rgba(0, 0, 0, 0.2);
-
-  @media ${device.tablet} {
-    width: 80vw;
-  }
-  @media ${device.laptop} {
-    width: 39vw;
-  }
-`;
+import Line from './common/line';
 
 const Tools = () => (
-  <ToolsWrapper>
-    <ToolCard>
-      <h2>Frontend Web Development</h2>
-      <p>I use modern technologies to build fast, functional websites.</p>
-      <p>
-        {' '}
-        Responsive websites with JavaScript, ReactJS, HTML, CSS, Styled Components, GatsbyJS and Git
-      </p>
-    </ToolCard>
-    <ToolCard>
-      <h2>User Interface Design</h2>
-      <p>I solve design problems with usability and accessibility in mind.</p>
-      <p>Wireframes, prototypes, logos, and motion graphics with the Adobe Suite.</p>
-    </ToolCard>
-  </ToolsWrapper>
+  <>
+    <Line />
+    <h3>Frontend Web Development</h3>
+    <p>
+      I use modern technologies to build fast, functional websites. I have professional experience
+      developing responsive websites and applications with JavaScript, React, HTML/CSS, GatsbyJS and
+      Git.
+    </p>
+    <h3>User Interface Design</h3>
+    <p>
+      A strong background in UI/UX design guides my development process and allows me to view the
+      applications I am creating from the perspective of the user.
+    </p>
+  </>
 );
 
 export default Tools;

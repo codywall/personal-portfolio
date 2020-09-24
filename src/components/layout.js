@@ -8,9 +8,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-
+import styled from '@emotion/styled';
 import Header from './header';
 import './layout.css';
+
+const Main = styled('main')`
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 1rem;
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,7 +32,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <Main>{children}</Main>
     </>
   );
 };
