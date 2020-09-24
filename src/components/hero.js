@@ -13,12 +13,12 @@ const HeroWrapper = styled('div')`
   padding: 0 2vw;
 
   @media ${device.tablet} {
-    margin: 50px 0;
+    margin-top: 20px;
     flex-direction: column;
   }
 
   @media ${device.mobile} {
-    margin: 50px 0;
+    margin-top: 20px;
     flex-direction: column;
   }
 `;

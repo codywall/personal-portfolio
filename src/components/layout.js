@@ -8,10 +8,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-
+import styled from '@emotion/styled';
 import Header from './header';
 import './layout.css';
-import styled from '@emotion/styled';
 
 const Main = styled('main')`
   max-width: 700px;
