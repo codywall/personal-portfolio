@@ -1,85 +1,28 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import styled from '@emotion/styled';
-import device from '../utils/breakpoints';
 import colors from '../utils/colors';
 
-const HeroWrapper = styled('div')`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  @media ${device.tablet} {
-    margin-top: 20px;
-    flex-direction: column;
-  }
-
-  @media ${device.mobile} {
-    margin-top: 20px;
-    flex-direction: column;
-  }
-`;
-
-const HeroTextWrapper = styled('div')`
-  h1 {
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-size: 1.6em;
-    font-weight: 800;
-    line-height: 1.4em;
-
-    @media ${device.tablet} {
-      font-size: 2.5em;
-    }
-    @media ${device.mobile} {
-      margin-bottom: 10px;
-    }
-  }
-
-  p {
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.5em;
-    padding-top: 1vw;
-    max-width: 85vw;
-
-    @media ${device.tablet} {
-      font-size: 1.3rem;
-    }
-
-    @media ${device.laptop} {
-      padding-top: 0;
-      font-size: 1.3rem;
-    }
-
-    .accent {
-      color: ${colors.primary};
-    }
-  }
+const Accent = styled('span')`
+  color: ${colors.accent};
 `;
 
 const Hero = () => (
-  <HeroWrapper>
-    <HeroTextWrapper>
-      <h1>
-        Hi!{' '}
-        <span role="img" aria-label="Wave emoji">
-          👋
-        </span>{' '}
-        I&apos;m
-        <span className="accent"> Cody Wall</span>. I am a front end
-        <span className="accent"> web developer</span> based out of Monterey, California.
-      </h1>
-      <p>
-        I love building websites using modern frameworks and technologies, and strive to improve the
-        web experience for everyone. I am always looking for exciting projects!
-      </p>
-    </HeroTextWrapper>
-  </HeroWrapper>
+  <div style={{ marginTop: '2rem' }}>
+    <h1>
+      Hi!{' '}
+      <span role="img" aria-label="Wave emoji">
+        👋
+      </span>{' '}
+      I&apos;m
+      <Accent> Cody Wall</Accent>. I am a front end
+      <Accent> web developer</Accent> based out of Monterey, California.
+    </h1>
+    <p>
+      I love building websites using modern frameworks and technologies, and strive to improve the
+      web experience for everyone. I am always looking for exciting projects!
+    </p>
+  </div>
 );
 
 export default Hero;

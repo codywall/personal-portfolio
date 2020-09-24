@@ -1,13 +1,12 @@
 import styled from '@emotion/styled';
+import colors from '../../utils/colors';
 
 const Line = styled('hr')`
   display: block;
   text-align: center;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid grey;
-  margin: 1em auto;
-  margin-bottom: 50px;
+  border-top: 3px solid ${colors.accent};
+  background: none;
+  margin: 3rem auto;
   width: 60%;
 `;
 
