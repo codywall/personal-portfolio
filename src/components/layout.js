@@ -11,6 +11,12 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
 import './layout.css';
+import styled from '@emotion/styled';
+
+const Main = styled('main')`
+  max-width: 700px;
+  margin: 0 auto;
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,7 +32,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <Main>{children}</Main>
     </>
   );
 };
