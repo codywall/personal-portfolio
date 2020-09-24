@@ -10,7 +10,6 @@ const HeroWrapper = styled('div')`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 2vw;
 
   @media ${device.tablet} {
     margin-top: 20px;
