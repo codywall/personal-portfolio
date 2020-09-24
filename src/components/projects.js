@@ -64,7 +64,7 @@ const Projects = () => (
     <h2>Recent projects</h2>
     {projects.map(project => (
       <ProjectCard key={project.name}>
-        <h3>{project.name}</h3>
+        <h4>{project.name}</h4>
         <p>{project.description}</p>
         <div className="icons-wrapper">
           <a href={project.githubUrl}>
