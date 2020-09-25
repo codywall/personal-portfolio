@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import Colors from '../utils/colors';
 
 const LogoWrapper = styled('div')`

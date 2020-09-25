@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import Line from './common/line';
 import github from '../images/icons/github-logo.svg';
 import externalLink from '../images/icons/link.svg';
