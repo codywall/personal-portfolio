@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Cody Wall`,
-    description: `Cody Wall is a frontend web developer based out of the Monterey Bay Area.`,
+    description: `Hi! I'm Cody Wall. I am a front end web developer based out of Monterey, California.
+    I love building websites using modern frameworks and technologies, and strive to improve the
+    web experience for everyone.`,
     author: `@codywall`
   },
   plugins: [
