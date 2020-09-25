@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: `Cody Wall`,
-    description: `Cody Wall is a frontend web developer based out of the Monterey Bay Area.`,
+    description: `Hi! I'm Cody Wall. I am a front end web developer based out of Monterey, California.
+    I love building websites using modern frameworks and technologies, and strive to improve the
+    web experience for everyone.`,
     author: `@codywall`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,13 +33,6 @@ module.exports = {
             variants: [`400`, `700`]
           }
         ]
-      }
-    },
-    {
-      resolve: `gatsby-styled-components-dark-mode`,
-      options: {
-        light: `require(${__dirname}/src/utils/themes.js).lightTheme`,
-        dark: `require(${__dirname}/src/utils/themes.js).darkTheme`
       }
     },
     {

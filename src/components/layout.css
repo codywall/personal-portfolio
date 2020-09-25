@@ -7,7 +7,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: white; */
+  background: white;
 }
 article,
 aside,
@@ -203,8 +203,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-  /* color: hsla(0, 0%, 0%, 0.8); */
+  color: hsla(0, 0%, 0%, 0.8);
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
