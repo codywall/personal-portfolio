@@ -34,6 +34,8 @@ export const pageQuery = graphql`
             slug
             summary
             title
+            githubURL
+            url
           }
         }
       }

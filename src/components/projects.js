@@ -38,6 +38,7 @@ const ProjectCard = styled('div')`
 `;
 
 const Projects = ({ projects }) => {
+  console.log(projects);
   return (
     <>
       <Line />
@@ -47,7 +48,7 @@ const Projects = ({ projects }) => {
           <h4>{project.node.frontmatter.title}</h4>
           <p>{project.node.frontmatter.summary}</p>
           <div className="icons-wrapper">
-            <a href={project.node.frontmatter.githubUrl}>
+            <a href={project.node.frontmatter.githubURL}>
               <div className="icon">
                 <img src={github} alt="" />
                 <h5>Source</h5>
