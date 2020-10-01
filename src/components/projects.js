@@ -37,34 +37,31 @@ const ProjectCard = styled('div')`
   }
 `;
 
-const Projects = ({ projects }) => {
-  console.log(projects);
-  return (
-    <>
-      <Line />
-      <h2>Recent projects</h2>
-      {projects.map(project => (
-        <ProjectCard key={project.node.frontmatter.title}>
-          <h4>{project.node.frontmatter.title}</h4>
-          <p>{project.node.frontmatter.summary}</p>
-          <div className="icons-wrapper">
-            <a href={project.node.frontmatter.githubURL}>
-              <div className="icon">
-                <img src={github} alt="" />
-                <h5>Source</h5>
-              </div>
-            </a>
-            <a href={project.node.frontmatter.url}>
-              <div className="icon">
-                <img src={externalLink} alt="" />
-                <h5>Site Link</h5>
-              </div>
-            </a>
-          </div>
-        </ProjectCard>
-      ))}
-    </>
-  );
-};
+const Projects = ({ projects }) => (
+  <>
+    <Line />
+    <h2>Recent projects</h2>
+    {projects.map(project => (
+      <ProjectCard key={project.node.frontmatter.title}>
+        <h4>{project.node.frontmatter.title}</h4>
+        <p dangerouslySetInnerHTML={{ __html: project.node.frontmatter.summary }} />
+        <div className="icons-wrapper">
+          <a href={project.node.frontmatter.githubURL}>
+            <div className="icon">
+              <img src={github} alt="" />
+              <h5>Source</h5>
+            </div>
+          </a>
+          <a href={project.node.frontmatter.url}>
+            <div className="icon">
+              <img src={externalLink} alt="" />
+              <h5>Site Link</h5>
+            </div>
+          </a>
+        </div>
+      </ProjectCard>
+    ))}
+  </>
+);
 
 export default Projects;
