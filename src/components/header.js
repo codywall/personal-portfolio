@@ -6,11 +6,11 @@ import Colors from '../utils/colors';
 const HeaderWrapper = styled('div')`
   top: 0;
   width: 100vw;
-  padding: 8px;
-  height: 68px;
+  min-height: 68px;
+  margin: 0;
 
   .logo-wrapper {
-    margin: 10px;
+    margin-top: 10px;
   }
 `;
 

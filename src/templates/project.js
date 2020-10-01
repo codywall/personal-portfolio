@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
+import Footer from '../components/footer';
 import SEO from '../components/seo';
 
 export default function Template({ data }) {
@@ -9,11 +10,11 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <Link to="/">Back to home</Link>
-      <div style={{ marginTop: '10px' }}>
+      <div>
         <h1>{frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
+      <Footer />
     </Layout>
   );
 }

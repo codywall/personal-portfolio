@@ -7,7 +7,7 @@ const Accent = styled('span')`
 `;
 
 const Hero = () => (
-  <div style={{ marginTop: '2rem' }}>
+  <div>
     <h1>
       Hi!{' '}
       <span role="img" aria-label="Wave emoji">
