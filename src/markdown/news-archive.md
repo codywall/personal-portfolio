@@ -13,8 +13,12 @@ To begin, I wrote a MySQL query to retrieve all news articles since 2010 from th
 
 Next, I built a [NodeJS application](https://github.com/codywall/archive-transformer) to convert these JSON objects into markdown files. I used the file system module within Node to walk through these objects and create HTML nodes for each of the content blocks, then append those to a markdown file. A tricky aspect was getting the page title, converting it to a slug, and adding both of them to the frontmatter of the markdown files. This allowed me to access those variables when I went to create the pages.
 
-The news articles from 2005 to 2010 lived in their own news archive, created by a developer before me. They contained a lot of formatting such as extra divs, which I needed to strip so they would match the files I created. I used a package called Cheerio to go through and strip any extraneous HTML nodes, cleaning the files significantly. The frontmatter was also updated with the correct information.
+The news articles from 2005 to 2010 lived in their own news archive, created by a developer before me. They contained a lot of formatting such as extra divs, which I needed to strip so they would match the files I created. I used a package called Cheerio to go through and remove any extraneous HTML nodes, cleaning the files significantly. The frontmatter was also updated with the correct information.
 
-Now that I had around 2,400 markdown files, I created a GatsbyJS application to display them. 
+Now that I had around 2,400 markdown files, I created a GatsbyJS application to display them. I used a folder containing the markdown files as a GraphQL data source, and created pages for each of the files, using the appropriate page titles and slugs. I also have a section where you can browse all articles alphabetically, and implemented pagination to help with loading times.
 
+Lastly, I implemented a search feature. Initially I had set up search to only filter results by article title, but after talking with the marketing department, I altered the app to search for terms in the body of the article as well. Setting up the search box using React was a little bit trickier than using vanilla javascript, but it was worth it.
 
+Over the course of this project, I ran into a lot of performance issues with Gatsby, as initializing 2,400 pages from markdown files can be sluggish. I found that others had had similar issues and I was able to rewrite my GraphQL queries to be more efficient. I also became more familiar with Node, and learned how to manipulate files in bulk using Cheerio and the Node file system module. 
+
+Overall, there were a lot of pieces to this project, and it was a great learning experience. I became more familiar with Node and Gatsby. I also feel confident I could handle a web scraping project with the Cheerio experience I gained. And most importantly, the client was happy with the end result.
