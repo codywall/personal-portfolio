@@ -17,4 +17,4 @@ Before you run this application, ensure you have met the following requirements:
 
 ## Contact
 
-Connect with me on [LinkedIn](https://www.linkedin.com/in/codycwall) if you would like more information about me.
+Connect with me on [LinkedIn](https://www.linkedin.com/in/codycwall)!
