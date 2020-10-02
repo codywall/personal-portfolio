@@ -5,7 +5,7 @@ import Colors from '../utils/colors';
 
 const HeaderWrapper = styled('div')`
   top: 0;
-  width: 100vw;
+  max-width: 100vw;
   min-height: 68px;
   margin: 0;
 
