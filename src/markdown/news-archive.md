@@ -1,7 +1,7 @@
 ---
 slug: news-archive
 title: News Archive
-summary: The CSUMB News Archive is a React web application which allows campus staff to view and search for archived news articles for Cal State University, Monterey Bay. The implementation of this application allows unneeded news stories to be removed from the campus website database while keeping them for reference. This project saved the University database hosting costs, as it is a no cost solution. <a href="/news-archive">Read the case study</a>
+summary: <p>The CSUMB News Archive is a React web application which allows campus staff to view and search for archived news articles for Cal State University, Monterey Bay. The implementation of this application allows unneeded news stories to be removed from the campus website database while keeping them for reference.</p><p>I used NodeJS to convert the news articles to markdown files, and hosted them using GatsbyJS, a static site generator. This tech stack allowed me to host the project for free, saving the University from annual hosting costs.</p><a href="/news-archive">Read the case study</a>
 githubURL: https://github.com/csumb-archives/news-gatsby
 url: https://csumb-news-archive.netlify.app
 
