@@ -18,8 +18,9 @@ const Hero = () => (
       <Accent> web developer</Accent> based out of Monterey, California.
     </h1>
     <p>
-      I love building websites using modern frameworks and technologies, and strive to improve the
-      web experience for everyone. I am always looking for exciting projects!
+      I am currently the primary web developer for CSU Monterey Bay. I love building websites using
+      modern frameworks and technologies, and strive to improve the web experience for everyone. I
+      am always looking for exciting projects!
     </p>
   </div>
 );
