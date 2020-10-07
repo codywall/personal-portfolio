@@ -61,6 +61,7 @@ const Contact = () => (
   <>
     <h4>Send me a message</h4>
     <ContactForm name="contact" method="POST" data-netlify="true" action="/success">
+      <input type="hidden" name="form-name" value="contact" />
       <label htmlFor="name">
         Name <input type="text" id="name" name="name" />
       </label>
