@@ -1,9 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const SuccessPage = () => (
   <Layout>
+    <SEO title="Success" />
     <h1>
       <span role="img" aria-label="confetti emoji">
         🎉{' '}
