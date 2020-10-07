@@ -44,7 +44,7 @@ const Projects = ({ projects }) => (
     {projects.map(project => (
       <ProjectCard key={project.node.frontmatter.title}>
         <h4>{project.node.frontmatter.title}</h4>
-        <p dangerouslySetInnerHTML={{ __html: project.node.frontmatter.summary }} />
+        <div dangerouslySetInnerHTML={{ __html: project.node.frontmatter.summary }} />
         <div className="icons-wrapper">
           <a href={project.node.frontmatter.githubURL}>
             <div className="icon">
