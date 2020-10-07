@@ -60,7 +60,7 @@ const ContactForm = styled('form')`
 const Contact = () => (
   <>
     <h4>Send me a message</h4>
-    <ContactForm name="contact" method="POST" data-netlify="true">
+    <ContactForm name="contact" method="POST" data-netlify="true" action="/success">
       <label htmlFor="name">
         Name <input type="text" id="name" name="name" />
       </label>
