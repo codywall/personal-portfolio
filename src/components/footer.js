@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import Line from './common/line';
+import ContactForm from './contact-form';
 
 const Copyright = styled('h6')`
   margin-top: 3rem;
@@ -18,6 +19,8 @@ const Footer = () => (
       and follow me on <a href="https://github.com/codywall">GitHub</a> to see what I&apos;m working
       on!
     </p>
+    <ContactForm />
+
     <Copyright>&#169;2020 Cody Wall</Copyright>
   </>
 );
