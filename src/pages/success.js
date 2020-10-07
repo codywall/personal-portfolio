@@ -4,7 +4,12 @@ import Layout from '../components/layout';
 
 const SuccessPage = () => (
   <Layout>
-    <h1>Message sent successfully!</h1>
+    <h1>
+      <span role="img" aria-label="confetti emoji">
+        🎉{' '}
+      </span>
+      Message sent successfully!
+    </h1>
     <p>
       I got your message, and will get back to you as soon as possible. Go{' '}
       <Link to="/">back home</Link>
