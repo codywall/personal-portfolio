@@ -2,27 +2,31 @@ import React from 'react';
 import styled from 'styled-components';
 import colors from '../utils/colors';
 
-const Accent = styled('span')`
-  color: ${colors.accent};
+const Intro = styled('h1')`
+  margin-top: 3rem;
+
+  .accent {
+    color: ${colors.accent};
+  }
 `;
 
 const Hero = () => (
-  <div>
-    <h1>
+  <>
+    <Intro>
       Hi!{' '}
       <span role="img" aria-label="Wave emoji">
         👋
       </span>{' '}
       I&apos;m
-      <Accent> Cody Wall</Accent>. I am a front end
-      <Accent> web developer</Accent> based out of Monterey, California.
-    </h1>
+      <span className="accent"> Cody Wall</span>. I am a front end
+      <span className="accent"> web developer</span> based out of Monterey, California.
+    </Intro>
     <p>
       I am currently the primary web developer for CSU Monterey Bay. I love building websites using
       modern frameworks and technologies, and strive to improve the web experience for everyone. I
       am always looking for exciting projects!
     </p>
-  </div>
+  </>
 );
 
 export default Hero;
