@@ -11,13 +11,14 @@ const ProjectCard = styled('div')`
   border: 1.5px solid ${colors.lightgrey};
   box-shadow: 0 15px 20px -20px rgba(0, 0, 0, 0.2);
   margin: 2rem 0;
-  padding: 1rem;
+  padding: 3rem 2rem;
 
   .icons-wrapper {
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
     display: flex;
     justify-content: space-around;
     width: 80%;
+    padding: 0;
 
     @media only screen and (${device.tablet}) {
       width: 50%;
@@ -43,7 +44,7 @@ const Projects = ({ projects }) => (
     <h2>Recent projects</h2>
     {projects.map(project => (
       <ProjectCard key={project.node.frontmatter.title}>
-        <h4>{project.node.frontmatter.title}</h4>
+        <h3>{project.node.frontmatter.title}</h3>
         <div dangerouslySetInnerHTML={{ __html: project.node.frontmatter.summary }} />
         <div className="icons-wrapper">
           <a href={project.node.frontmatter.githubURL}>

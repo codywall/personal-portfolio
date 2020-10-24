@@ -6,8 +6,7 @@ const ContactForm = styled('form')`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 85%;
-  margin: 2rem auto;
+  margin: 2rem 0;
 
   label {
     display: block;
@@ -59,7 +58,18 @@ const ContactForm = styled('form')`
 
 const Contact = () => (
   <>
-    <h4>Send me a message</h4>
+    <p>
+      If you would like to learn more about me, feel free to connect with me on
+      <a href="https://linkedin.com/in/codycwall"> LinkedIn, </a>
+      and follow me on <a href="https://github.com/codywall">GitHub</a> to see what I&apos;m working
+      on!
+    </p>
+    <p>
+      If you would like to get in touch right away, send me an{' '}
+      <a href="mailto:cody.wall@gmail.com">email</a> or fill this form out and I will get back to
+      you right away.
+    </p>
+    <h3>Send me a message</h3>
     <ContactForm name="contact" method="POST" data-netlify="true" action="/success">
       <input type="hidden" name="form-name" value="contact" />
       <label htmlFor="name">
