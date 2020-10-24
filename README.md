@@ -1,6 +1,6 @@
 # Cody Wall's personal portolio
 
-This is a GatsbyJS static site which sources project information and writeups from markdown files for ease of writing without the additional overhead of a content management system.
+This is a GatsbyJS static site which sources project information and writeups from markdown files for a an improved development and content creation experience without the additional overhead of a content management system.
 
 ## Setup
 
