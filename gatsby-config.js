@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Cody Wall`,
+    title: `Cody Wall Portfolio`,
     description: `Hi! I'm Cody Wall. I am a front end web developer based out of Monterey, California.
     I love building websites using modern frameworks and technologies, and strive to improve the
     web experience for everyone.`,
-    author: `@codywall`
+    author: `Cody Wall`,
+    image: `${__dirname}/src/images/site-thumbnail.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
