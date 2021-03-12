@@ -13,7 +13,7 @@ import favicon16 from '../images/favicon-16x16.png';
 import favicon32 from '../images/favicon-32x32.png';
 import favicon64 from '../images/favicon.ico';
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, author, image }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -22,6 +22,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            image
           }
         }
       }
@@ -53,6 +54,14 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`
+        },
+        {
+          property: `og:image`,
+          content: image
+        },
+        {
+          property: `og:author`,
+          content: author
         },
         {
           name: `twitter:card`,
@@ -90,7 +99,9 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
 };
 
 export default SEO;
