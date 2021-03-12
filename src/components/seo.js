@@ -57,11 +57,11 @@ function SEO({ description, lang, meta, title, author, image }) {
         },
         {
           property: `og:image`,
-          content: image
+          content: site.siteMetadata.image
         },
         {
           property: `og:author`,
-          content: author
+          content: site.siteMetadata.author
         },
         {
           name: `twitter:card`,
