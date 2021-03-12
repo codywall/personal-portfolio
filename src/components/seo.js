@@ -22,6 +22,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            image
           }
         }
       }
@@ -53,6 +54,14 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`
+        },
+        {
+          property: `og:image`,
+          content: site.siteMetadata.image
+        },
+        {
+          property: `og:author`,
+          content: site.siteMetadata.author
         },
         {
           name: `twitter:card`,
@@ -90,7 +99,9 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
 };
 
 export default SEO;

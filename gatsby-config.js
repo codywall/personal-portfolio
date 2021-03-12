@@ -5,7 +5,7 @@ module.exports = {
     I love building websites using modern frameworks and technologies, and strive to improve the
     web experience for everyone.`,
     author: `Cody Wall`,
-    image: `${__dirname}/src/images/site-thumbnail.png`
+    image: `/site-thumbnail.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
