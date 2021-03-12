@@ -13,7 +13,7 @@ import favicon16 from '../images/favicon-16x16.png';
 import favicon32 from '../images/favicon-32x32.png';
 import favicon64 from '../images/favicon.ico';
 
-function SEO({ description, lang, meta, title, author, image }) {
+function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
