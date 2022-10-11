@@ -18,13 +18,12 @@ const Hero = () => (
         👋
       </span>{' '}
       I&apos;m
-      <span className="accent"> Cody Wall</span>. I am a front end
-      <span className="accent"> web developer</span> based out of Monterey, California.
+      <span className="accent"> Cody Wall</span>. I am a senior front end
+      <span className="accent"> web developer</span> based out of Grass Valley, California.
     </Intro>
     <p>
-      I am currently the primary web developer for CSU Monterey Bay. I love building websites using
-      modern frameworks and technologies, and strive to improve the web experience for everyone. I
-      am always looking for exciting projects!
+      I am currently a Senior Frontend Developer at Titan.io. I have industry experience designing and building websites and web 
+applications. I specialize in Javascript and have extensive professional experience working with React and Node.js. I also have professional experience with smart contracts and dApp development.
     </p>
   </>
 );
