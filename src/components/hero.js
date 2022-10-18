@@ -18,8 +18,8 @@ const Hero = () => (
         👋
       </span>{' '}
       I&apos;m
-      <span className="accent"> Cody Wall</span>. I am a senior front end
-      <span className="accent"> web developer</span> based out of Grass Valley, California.
+      <span className="accent"> Cody Wall</span>. I am a senior 
+      <span className="accent">front end developer</span> based out of Grass Valley, California.
     </Intro>
     <p>
       I am currently a Senior Frontend Developer at Titan.io. I have industry experience designing and building websites and web 
