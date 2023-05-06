@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
+import { MantineProvider } from '@mantine/core';
 import styled from 'styled-components';
 import Header from './header';
 import './layout.css';
@@ -24,10 +25,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Main>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        {children}
-      </Main>
+      <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+        <Main>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          {children}
+        </Main>
+      </MantineProvider>
     </>
   );
 };
