@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-const ProjectTemplate = ({ data }) => {
+const Template = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
@@ -12,8 +12,8 @@ const ProjectTemplate = ({ data }) => {
   );
 };
 
-export const projectQuery = graphql`
-  query ProjectByPath($path: String!) {
+export const postQuery = graphql`
+  query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
@@ -24,4 +24,4 @@ export const projectQuery = graphql`
   }
 `;
 
-export default ProjectTemplate;
+export default Template;

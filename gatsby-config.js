@@ -18,10 +18,17 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/markdown`,
-        name: `markdown-pages`
+        name: 'markdown-pages',
+        path: `${__dirname}/src/content/markdown-pages`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'markdown-projects',
+        path: `${__dirname}/src/content/markdown-projects`
       }
     },
     `gatsby-transformer-remark`,
