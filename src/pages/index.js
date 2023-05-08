@@ -14,9 +14,10 @@ import {
 } from '@mantine/core';
 
 import jobs from '../data/jobs.json';
-import featuredPosts from '../data/featured-posts.json';
 
-const IndexPage = () => {
+const IndexPage = props => {
+  const posts = props.data.allMarkdownRemark.edges.map(edge => edge.node.frontmatter);
+
   return (
     <Container size="sm" px="lg">
       <Container id="hero" py={50}>
@@ -82,13 +83,17 @@ const IndexPage = () => {
           Blog
         </Title>
         <ul>
-          {featuredPosts.map(post => (
+          {posts.map(post => (
             <li key={post.title}>
-              <Text weight={500}>{post.title}</Text>
-              <Text>{post.description}</Text>
+              <Link to={post.path}>
+                <Text weight={500}>{post.title}</Text>
+              </Link>
             </li>
           ))}
         </ul>
+        <Flex justify="center" pt={10}>
+          <Link to="/blog">View all blog posts</Link>
+        </Flex>
       </Container>
 
       <Container pb={50}>
@@ -135,16 +140,19 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/markdown-pages/" } }
+      limit: 10
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           html
           frontmatter {
-            slug
-            summary
+            path
             title
-            githubURL
-            url
+            date
+            category
           }
         }
       }

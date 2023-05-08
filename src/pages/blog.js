@@ -1,40 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql, Link } from 'gatsby';
+import { Container, Title, Text, Flex, Button } from '@mantine/core';
 
-const BlogPage = ({ data }) => (
-  <div>
-    <Link to="/">Back to Home</Link>
-    <h1>Blog</h1>
-    {data.allMarkdownRemark.edges.map(post => (
-      <div key={post.node.id}>
-        <h3>{post.node.frontmatter.title}</h3>
-        <small>{post.node.frontmatter.date}</small>
-        <br />
-        <br />
-        <Link to={post.node.frontmatter.path}>Read More</Link>
-        <br />
-        <br />
-        <hr />
-      </div>
-    ))}
-  </div>
-);
+const BlogPage = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges.map(edge => edge.node.frontmatter);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const categories = ['All', ...data.allMarkdownRemark.categories.map(cat => cat.fieldValue)];
+
+  return (
+    <Container size="md">
+      <Link to="/">Home</Link>
+      <Title order={1} align="center" mt={30}>
+        Blog
+      </Title>
+      <Flex justify="center" pb={20}>
+        {categories.map(category => (
+          <Button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            variant={selectedCategory === category ? 'filled' : 'outline'}
+            mx={5}
+          >
+            {category}
+          </Button>
+        ))}
+      </Flex>
+      <ul>
+        {posts
+          .filter(post => selectedCategory === 'All' || post.category === selectedCategory)
+          .map(post => (
+            <li key={post.path}>
+              <Link to={post.path}>
+                <Text weight={500}>{post.title}</Text>
+              </Link>
+            </li>
+          ))}
+      </ul>
+    </Container>
+  );
+};
+
+export default BlogPage;
 
 export const pageQuery = graphql`
-  query BlogIndexQuery {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(markdown-pages)/" } }) {
+  query BlogQuery {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/markdown-pages/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
-          id
           frontmatter {
             path
             title
             date
+            category
           }
         }
+      }
+      categories: group(field: frontmatter___category) {
+        fieldValue
       }
     }
   }
 `;
-
-export default BlogPage;
