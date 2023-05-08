@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
 import { MantineProvider } from '@mantine/core';
 import styled from 'styled-components';
-import Header from './header';
 import './layout.css';
+import theme from '../utils/theme';
+import Navigation from './navigation';
 
 const Main = styled('main')`
   max-width: 750px;
@@ -12,24 +12,19 @@ const Main = styled('main')`
   padding: 0 1rem;
 `;
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+const links = [
+  { label: 'Home', link: '/' },
+  { label: 'Projects', link: '/projects' },
+  { label: 'Blog', link: '/blog' },
+  { label: 'Contact', link: '/contact' }
+];
 
+const Layout = ({ children }) => {
   return (
     <>
       <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
-        <Main>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          {children}
-        </Main>
+        <Navigation links={links} />
+        <Main>{children}</Main>
       </MantineProvider>
     </>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { graphql, Link } from 'gatsby';
 import { Container, Title, Text, Flex, Button } from '@mantine/core';
+import Layout from '../components/layout';
 
 const BlogPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(edge => edge.node.frontmatter);
@@ -8,35 +9,37 @@ const BlogPage = ({ data }) => {
   const categories = ['All', ...data.allMarkdownRemark.categories.map(cat => cat.fieldValue)];
 
   return (
-    <Container size="md">
-      <Link to="/">Home</Link>
-      <Title order={1} align="center" mt={30}>
-        Blog
-      </Title>
-      <Flex justify="center" pb={20}>
-        {categories.map(category => (
-          <Button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            variant={selectedCategory === category ? 'filled' : 'outline'}
-            mx={5}
-          >
-            {category}
-          </Button>
-        ))}
-      </Flex>
-      <ul>
-        {posts
-          .filter(post => selectedCategory === 'All' || post.category === selectedCategory)
-          .map(post => (
-            <li key={post.path}>
-              <Link to={post.path}>
-                <Text weight={500}>{post.title}</Text>
-              </Link>
-            </li>
+    <Layout>
+      <Container size="md">
+        <Link to="/">Home</Link>
+        <Title order={1} align="center" mt={30}>
+          Blog
+        </Title>
+        <Flex justify="center" pb={20}>
+          {categories.map(category => (
+            <Button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              variant={selectedCategory === category ? 'filled' : 'outline'}
+              mx={5}
+            >
+              {category}
+            </Button>
           ))}
-      </ul>
-    </Container>
+        </Flex>
+        <ul>
+          {posts
+            .filter(post => selectedCategory === 'All' || post.category === selectedCategory)
+            .map(post => (
+              <li key={post.path}>
+                <Link to={post.path}>
+                  <Text weight={500}>{post.title}</Text>
+                </Link>
+              </li>
+            ))}
+        </ul>
+      </Container>
+    </Layout>
   );
 };
 

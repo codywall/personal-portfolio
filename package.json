@@ -7,6 +7,8 @@
   "dependencies": {
     "@emotion/react": "^11.10.8",
     "@mantine/core": "^6.0.10",
+    "@mantine/hooks": "^6.0.10",
+    "@tabler/icons-react": "^2.17.0",
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.68",
     "gatsby-image": "^2.4.21",

@@ -1,14 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Container, Title } from '@mantine/core';
 
 const Template = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    <div>
-      <h1>{frontmatter.title}</h1>
+    <Container>
+      <Title order={1}>{frontmatter.title}</Title>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    </Container>
   );
 };
 
