@@ -11,7 +11,6 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <Container size="md">
-        <Link to="/">Home</Link>
         <Title order={1} align="center" mt={30}>
           Blog
         </Title>

@@ -39,6 +39,14 @@ module.exports = {
         display: `swap`
       }
     },
+    `gatsby-plugin-sharp`,
+
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        sharpPlugins: [`gatsby-plugin-sharp`, `gatsby-transformer-sharp`]
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

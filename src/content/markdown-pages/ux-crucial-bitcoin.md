@@ -2,6 +2,7 @@
 title: "Tackling Bitcoin's User Experience Barriers: Making Mainstream Adoption a Reality"
 date: '2023-05-02'
 path: '/blog/bitcoin-ux-barriers'
+featuredImage: '../../images/blog/ux-bitcoin.png'
 category: 'Bitcoin'
 ---
 

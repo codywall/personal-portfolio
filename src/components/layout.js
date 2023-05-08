@@ -7,7 +7,7 @@ import theme from '../utils/theme';
 import Navigation from './navigation';
 
 const Main = styled('main')`
-  max-width: 750px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
 `;

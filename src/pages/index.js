@@ -10,18 +10,20 @@ import {
   Textarea,
   Button,
   Flex,
-  Title
+  Title,
+  SimpleGrid
 } from '@mantine/core';
 
 import jobs from '../data/jobs.json';
 import Layout from '../components/layout';
+import ArticleCard from '../components/article-card';
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(edge => edge.node.frontmatter);
 
   return (
     <Layout>
-      <Container size="sm" px="lg">
+      <Container size="xl">
         <Container id="hero" py={50}>
           <header>
             <Title order={1} align="center">
@@ -34,7 +36,7 @@ const IndexPage = ({ data }) => {
         </Container>
 
         <Container id="about" pb={50}>
-          <Title order={2} align="center">
+          <Title order={2} a22lign="center">
             About
           </Title>
           <Text>
@@ -84,15 +86,16 @@ const IndexPage = ({ data }) => {
           <Title order={2} align="center">
             Blog
           </Title>
-          <ul>
+          <SimpleGrid cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
             {posts.map(post => (
-              <li key={post.title}>
-                <Link to={post.path}>
-                  <Text weight={500}>{post.title}</Text>
-                </Link>
-              </li>
+              <ArticleCard
+                title={post.title}
+                image={post.featuredImage.childImageSharp.fluid.src}
+                date={post.date}
+                key={post.title}
+              />
             ))}
-          </ul>
+          </SimpleGrid>
           <Flex justify="center" pt={10}>
             <Link to="/blog">View all blog posts</Link>
           </Flex>
@@ -156,6 +159,13 @@ export const pageQuery = graphql`
             title
             date
             category
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

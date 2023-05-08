@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStyles, Header, Container, Group, Button, Burger, rem } from '@mantine/core';
+import { createStyles, Header, Container, Group, Button, Burger, rem, Menu } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
@@ -66,7 +66,7 @@ function Navigation({ links }) {
   ));
 
   return (
-    <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }} mb={120}>
+    <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }}>
       <Container>
         <Container className={classes.inner} fluid>
           <Group>

@@ -3,7 +3,7 @@ title: 'The Role of Education in Driving Bitcoin Adoption'
 date: '2023-05-08'
 path: '/blog/bitcoin-education'
 category: 'Bitcoin'
-post_type: 'blog'
+featuredImage: '../../images/blog/bitcoin-education.png'
 ---
 
 ## Introduction
