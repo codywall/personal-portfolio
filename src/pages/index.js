@@ -36,9 +36,7 @@ const IndexPage = ({ data }) => {
         </Container>
 
         <Container id="about" pb={50}>
-          <Title order={2} a22lign="center">
-            About
-          </Title>
+          <Title order={2}>About</Title>
           <Text>
             I am a versatile developer with a diverse skillset that includes frontend, backend,
             UI/UX design, database administration, and web3 development. My experience spans various
