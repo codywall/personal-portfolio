@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => {
             </Col>
           </Grid>
           <Flex justify="center" pt={10}>
-            <Link href="#more-projects">More projects</Link>
+            <Link href="/projects">More projects</Link>
           </Flex>
         </Container>
 
