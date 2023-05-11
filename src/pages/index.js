@@ -21,6 +21,7 @@ import ArticleCard from '../components/article-card';
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(edge => edge.node.frontmatter);
 
+  console.log(posts);
   return (
     <Layout>
       <Container size="xl">
@@ -84,7 +85,7 @@ const IndexPage = ({ data }) => {
             {posts.map(post => (
               <ArticleCard
                 title={post.title}
-                image={post.featuredImage.childImageSharp.fluid.src}
+                image={post.featuredImage.childImageSharp.gatsbyImageData.src} //this doesn't work
                 date={post.date}
                 key={post.title}
               />
@@ -139,7 +140,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content/markdown-pages/" } }
       limit: 10
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {
@@ -151,9 +152,7 @@ export const pageQuery = graphql`
             category
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
           }

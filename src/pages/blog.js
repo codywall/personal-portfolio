@@ -48,7 +48,7 @@ export const pageQuery = graphql`
   query BlogQuery {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content/markdown-pages/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {
@@ -60,7 +60,7 @@ export const pageQuery = graphql`
           }
         }
       }
-      categories: group(field: frontmatter___category) {
+      categories: group(field: { frontmatter: { category: SELECT } }) {
         fieldValue
       }
     }
