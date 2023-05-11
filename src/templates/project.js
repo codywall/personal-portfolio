@@ -19,8 +19,8 @@ const ProjectTemplate = ({ data }) => {
 };
 
 export const projectQuery = graphql`
-  query ProjectByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ProjectByPath($slug: String!) {
+    markdownRemark(frontmatter: { path: { eq: $slug } }) {
       html
       frontmatter {
         path

@@ -33,7 +33,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {
-          path: node.frontmatter.path
+          slug: node.frontmatter.path
         } // additional data can be passed via context
       });
     } else if (node.fileAbsolutePath.includes('/content/markdown-projects/')) {
@@ -41,7 +41,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         path: node.frontmatter.path,
         component: projectTemplate,
         context: {
-          path: node.frontmatter.path
+          slug: node.frontmatter.path
         } // additional data can be passed via context
       });
     }
