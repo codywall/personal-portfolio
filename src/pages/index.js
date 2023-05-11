@@ -53,9 +53,7 @@ const IndexPage = ({ data }) => {
         </Container>
 
         <Container id="portfolio" pb={50}>
-          <Title order={2} align="center">
-            Portfolio
-          </Title>
+          <Title order={2}>Portfolio</Title>
           <Grid gutter="md">
             <Col span={4}>
               <Text weight={500}>Responsive Web App</Text>
@@ -83,9 +81,7 @@ const IndexPage = ({ data }) => {
         </Container>
 
         <Container id="blog" pb={50}>
-          <Title order={2} align="center">
-            Blog
-          </Title>
+          <Title order={2}>Blog</Title>
           <SimpleGrid cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
             {posts.map(post => (
               <ArticleCard
@@ -102,9 +98,7 @@ const IndexPage = ({ data }) => {
         </Container>
 
         <Container pb={50}>
-          <Title order={2} align="center">
-            Work Experience
-          </Title>
+          <Title order={2}>Work Experience</Title>
           {jobs.map(job => (
             <Grid gutter="sm" pb={20}>
               <Col span={12}>
@@ -120,9 +114,7 @@ const IndexPage = ({ data }) => {
         </Container>
 
         <Container id="contact">
-          <Title order={2} align="center">
-            Contact
-          </Title>
+          <Title order={2}>Contact</Title>
           <Text pb={30}>
             I&apos;d love to hear from you. If you&apos;re interested in discussing potential
             collaborations, exploring new opportunities, or just want to chat about the latest
