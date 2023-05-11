@@ -1,11 +1,11 @@
 ---
-
 slug: news-archive
 title: Digital Transformation of CSU Monterey Bay News Archive
 path: '/projects/news-archive'
 summary: <p>The CSUMB News Archive is a React web application which allows campus staff to view and search for archived news articles for Cal State University, Monterey Bay. The implementation of this application allows unneeded news stories to be removed from the campus website database while keeping them for reference.</p><p>I used NodeJS to convert the news articles to markdown files, and hosted them using GatsbyJS, a static site generator. This tech stack allowed me to host the project for free, saving the University from annual hosting costs.</p><a href="/news-archive">Read the case study</a>
 githubURL: https://github.com/csumb-archives/news-gatsby
 url: https://csumb-news-archive.netlify.app
+---
 
 In a transformative endeavor for the CSU Monterey Bay campus, I was tasked with the challenge of designing a cost-effective, long-term solution for the archival and retrieval of over 2,400 news articles published from 2005 to 2020. The project demanded a robust understanding of web scraping, data manipulation, static site generation, and meticulous planning. The result was a technologically superior news archive, devoid of recurring hosting costs, and powered by Gatsby and Netlify.
 
