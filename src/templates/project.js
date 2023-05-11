@@ -1,14 +1,20 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Container, Title } from '@mantine/core';
+import Layout from '../components/layout';
 
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    <div>
-      <h1>{frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    <Layout>
+      <Container size="sm" mt={50}>
+        <Title order={1} mb={10}>
+          {frontmatter.title}
+        </Title>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </Container>
+    </Layout>
   );
 };
 
