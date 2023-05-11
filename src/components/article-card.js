@@ -1,5 +1,6 @@
 import React from 'react';
-import { createStyles, Card, Image, Text, Group, AspectRatio } from '@mantine/core';
+import { createStyles, Card, Text, AspectRatio } from '@mantine/core';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const useStyles = createStyles(theme => ({
   card: {
@@ -26,7 +27,7 @@ function ArticleCard({ image, title, date }) {
   return (
     <Card key={title} p="md" radius="md" component="a" href="#" className={classes.card}>
       <AspectRatio ratio={1920 / 1080}>
-        <Image src={image} />
+        <GatsbyImage image={image} alt={title} />
       </AspectRatio>
       <Text color="dimmed" size="xs" transform="uppercase" weight={700} mt="md">
         {formattedDate}

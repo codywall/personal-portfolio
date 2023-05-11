@@ -85,7 +85,7 @@ const IndexPage = ({ data }) => {
             {posts.map(post => (
               <ArticleCard
                 title={post.title}
-                image={post.featuredImage.childImageSharp.gatsbyImageData.src} //this doesn't work
+                image={post.featuredImage.childImageSharp.gatsbyImageData} //this doesn't work
                 date={post.date}
                 key={post.title}
               />
@@ -152,7 +152,7 @@ export const pageQuery = graphql`
             category
             featuredImage {
               childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH)
+                gatsbyImageData(layout: CONSTRAINED, aspectRatio: 1.77)
               }
             }
           }

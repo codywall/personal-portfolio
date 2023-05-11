@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Container, Image, Text, Title } from '@mantine/core';
+import { Container, Text, Title } from '@mantine/core';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 
 const Template = ({ data }) => {
@@ -15,12 +16,9 @@ const Template = ({ data }) => {
   return (
     <Layout>
       <Container size="sm" mt={50}>
-        <Image
-          src={frontmatter.featuredImage.childImageSharp.fluid.src}
+        <GatsbyImage
+          image={frontmatter.featuredImage.childImageSharp.gatsbyImageData}
           alt={frontmatter.title}
-          radius="md"
-          align="center"
-          height={300}
         />
         <Title order={2} mb={10}>
           {frontmatter.title}
@@ -44,9 +42,7 @@ export const postQuery = graphql`
         date
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
