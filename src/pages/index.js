@@ -11,7 +11,7 @@ import {
   Button,
   Flex,
   Title,
-  SimpleGrid
+  SimpleGrid,
 } from '@mantine/core';
 
 import jobs from '../data/jobs.json';
@@ -19,7 +19,7 @@ import Layout from '../components/layout';
 import ArticleCard from '../components/article-card';
 
 const IndexPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.map(edge => edge.node.frontmatter);
+  const posts = data.allMarkdownRemark.edges.map((edge) => edge.node.frontmatter);
 
   console.log(posts);
   return (
@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
               Cody Wall
             </Title>
             <Text align="center" size="lg">
-              Versatile Developer & Decentralization Enthusiast
+              Full-Stack Software Engineer | Database Administrator | Decentralization Advocate
             </Text>
           </header>
         </Container>
@@ -39,15 +39,17 @@ const IndexPage = ({ data }) => {
         <Container id="about" pb={50}>
           <Title order={2}>About</Title>
           <Text>
-            I am a versatile developer with a diverse skillset that includes frontend, backend,
-            UI/UX design, database administration, and web3 development. My experience spans various
-            industries and clients, from startups to established companies, and I&apos;ve
-            consistently delivered tailored solutions that address unique challenges.
+            I'm a multifaceted software engineer with a dynamic portfolio that ranges from front-end
+            to back-end development, UI/UX design, database administration, and decentralized
+            technology (Web3). With a track record of success in a variety of sectors - from
+            burgeoning startups to established companies - I specialize in designing and
+            implementing bespoke software solutions tailored to address unique business challenges.
           </Text>
           <Text pt={10}>
-            My passion for decentralized technology has led me to explore the potential of
-            blockchain and its transformative impact on various sectors. I pride myself on my strong
-            work ethic, problem-solving abilities, and commitment to continuous learning and growth.
+            As a strong advocate for decentralized technology, I explore the limitless potential of
+            blockchain, appreciating its profound transformative impact across diverse industries.
+            My professional ethos is built upon a robust work ethic, agile problem-solving
+            capabilities, and a lifelong commitment to learning and self-improvement.
           </Text>
         </Container>
 
@@ -82,7 +84,7 @@ const IndexPage = ({ data }) => {
         <Container id="blog" pb={50}>
           <Title order={2}>Blog</Title>
           <SimpleGrid cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
-            {posts.map(post => (
+            {posts.map((post) => (
               <ArticleCard
                 title={post.title}
                 image={post.featuredImage.childImageSharp.gatsbyImageData} //this doesn't work
@@ -98,7 +100,7 @@ const IndexPage = ({ data }) => {
 
         <Container pb={50}>
           <Title order={2}>Work Experience</Title>
-          {jobs.map(job => (
+          {jobs.map((job) => (
             <Grid gutter="sm" pb={20}>
               <Col span={12}>
                 <Text weight={700}>{job.title}</Text>
@@ -115,9 +117,8 @@ const IndexPage = ({ data }) => {
         <Container id="contact">
           <Title order={2}>Contact</Title>
           <Text pb={30}>
-            I&apos;d love to hear from you. If you&apos;re interested in discussing potential
-            collaborations, exploring new opportunities, or just want to chat about the latest
-            industry trends, feel free to get in touch.
+            I welcome the opportunity to collaborate, explore new challenges, or simply chat about
+            the latest industry trends. Feel free to connect.
           </Text>
           <form>
             <TextInput label="Name" placeholder="Name" required />
