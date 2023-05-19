@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
               Cody Wall
             </Title>
             <Text align="center" size="lg">
-              Full-Stack Software Engineer | Database Administrator | Decentralization Advocate
+              Full-Stack Software Engineer | Data Systems Architect | Decentralization Advocate
             </Text>
           </header>
         </Container>
