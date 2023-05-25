@@ -14,9 +14,9 @@ const Main = styled('main')`
 
 const links = [
   { label: 'Home', link: '/' },
-  { label: 'Projects', link: '/projects' },
+  // { label: 'Projects', link: '/projects' },
   { label: 'Blog', link: '/blog' },
-  { label: 'Contact', link: '/contact' }
+  { label: 'Contact', link: '/contact' },
 ];
 
 const Layout = ({ children }) => {
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;
