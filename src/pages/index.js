@@ -40,22 +40,19 @@ const IndexPage = ({ data }) => {
         <Container id="about" pb={50}>
           <Title order={2}>About</Title>
           <Text>
-            I'm a multifaceted software engineer with a dynamic portfolio that ranges from front-end
-            to back-end development, UI/UX design, database administration, and decentralized
-            technology (Web3). With a track record of success in a variety of sectors - from
-            burgeoning startups to established companies - I specialize in designing and
-            implementing bespoke software solutions tailored to address unique business challenges.
+            As a versatile Full-Stack Software Engineer, I've built a diverse portfolio across
+            various sectors. I manage all aspects of a project, from concept to deployment, with a
+            focus on creating powerful yet user-friendly software.
           </Text>
-          <Text pt={10}>
-            My mission is to develop software that's not just powerful but also straightforward and
-            approachable. I focus on crafting solutions that everyone can use with ease, regardless
-            of their tech know-how.{' '}
+          <Text mt={10}>
+            I champion collaboration, appreciating the unique insights from each team member and
+            fostering open communication to achieve our goals.
           </Text>
-          <Text pt={10}>
-            I thrive on learning, and I'm fueled by curiosity. I relish conversations that spark new
-            ideas and appreciate every opportunity to grow. With a mindset that I can master
-            anything I commit to, I continually explore new tech frontiers, creating unique
-            solutions to complex challenges.
+          <Text mt={10}>
+            {' '}
+            Driven by curiosity, I'm always learning, pushing the boundaries of technology to solve
+            complex problems and embrace new challenges. There's no task too great, and no detail
+            too small.
           </Text>
         </Container>
 
