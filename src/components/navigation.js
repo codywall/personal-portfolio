@@ -23,6 +23,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    maxWidth: 950,
   },
 
   links: {
