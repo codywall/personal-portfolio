@@ -17,6 +17,7 @@ import {
 import jobs from '../data/jobs.json';
 import Layout from '../components/layout';
 import ArticleCard from '../components/article-card';
+import Contact from '../components/contact-form';
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map((edge) => edge.node.frontmatter);
@@ -46,14 +47,19 @@ const IndexPage = ({ data }) => {
             implementing bespoke software solutions tailored to address unique business challenges.
           </Text>
           <Text pt={10}>
-            As a strong advocate for decentralized technology, I explore the limitless potential of
-            blockchain, appreciating its profound transformative impact across diverse industries.
-            My professional ethos is built upon a robust work ethic, agile problem-solving
-            capabilities, and a lifelong commitment to learning and self-improvement.
+            My mission is to develop software that's not just powerful but also straightforward and
+            approachable. I focus on crafting solutions that everyone can use with ease, regardless
+            of their tech know-how.{' '}
+          </Text>
+          <Text pt={10}>
+            I thrive on learning, and I'm fueled by curiosity. I relish conversations that spark new
+            ideas and appreciate every opportunity to grow. With a mindset that I can master
+            anything I commit to, I continually explore new tech frontiers, creating unique
+            solutions to complex challenges.
           </Text>
         </Container>
 
-        <Container id="portfolio" pb={50}>
+        {/* <Container id="portfolio" pb={50}>
           <Title order={2}>Portfolio</Title>
           <Grid gutter="md">
             <Col span={4}>
@@ -79,7 +85,7 @@ const IndexPage = ({ data }) => {
           <Flex justify="center" pt={10}>
             <Link href="/projects">More projects</Link>
           </Flex>
-        </Container>
+        </Container> */}
 
         <Container id="blog" pb={50}>
           <Title order={2}>Blog</Title>
@@ -114,20 +120,13 @@ const IndexPage = ({ data }) => {
           ))}
         </Container>
 
-        <Container id="contact">
+        <Container id="contact" pb={50}>
           <Title order={2}>Contact</Title>
           <Text pb={30}>
             I welcome the opportunity to collaborate, explore new challenges, or simply chat about
             the latest industry trends. Feel free to connect.
           </Text>
-          <form>
-            <TextInput label="Name" placeholder="Name" required />
-            <TextInput label="Email" placeholder="Email" required />
-            <Textarea label="Message" placeholder="Message" required />
-            <Button my={20} type="submit">
-              Send Message
-            </Button>
-          </form>
+          <Contact />
         </Container>
       </Container>
     </Layout>
