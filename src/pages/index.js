@@ -18,13 +18,14 @@ import jobs from '../data/jobs.json';
 import Layout from '../components/layout';
 import ArticleCard from '../components/article-card';
 import Contact from '../components/contact-form';
+import SEO from '../utils/SEO';
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map((edge) => edge.node.frontmatter);
 
-  console.log(posts);
   return (
     <Layout>
+      <SEO title="Home" />
       <Container size="xl">
         <Container id="hero" py={50}>
           <header>

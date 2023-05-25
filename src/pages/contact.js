@@ -2,10 +2,12 @@ import React from 'react';
 import { Container, Text, Title } from '@mantine/core';
 import ContactForm from '../components/contact-form';
 import Layout from '../components/layout';
+import SEO from '../utils/SEO';
 
 const Contact = () => {
   return (
     <Layout>
+      <SEO title="Contact" />
       <Container>
         <Title order={1} align="center" mt={30}>
           Contact

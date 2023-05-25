@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { Container, Text, Title } from '@mantine/core';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
+import SEO from '../utils/SEO';
 
 const Template = ({ data }) => {
   const { markdownRemark } = data;
@@ -15,6 +16,7 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={frontmatter.title} />
       <Container size="sm" mt={50}>
         <GatsbyImage
           image={frontmatter.featuredImage.childImageSharp.gatsbyImageData}

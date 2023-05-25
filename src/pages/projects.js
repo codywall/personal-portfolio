@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Container, Title } from '@mantine/core';
 import Layout from '../components/layout';
+import SEO from '../utils/SEO';
 
 // E-commerce Website: A full-stack e-commerce website can demonstrate your front-end, back-end, and database skills.
 
@@ -13,6 +14,7 @@ import Layout from '../components/layout';
 
 const ProjectsPage = ({ data }) => (
   <Layout>
+    <SEO title="Projects" />
     <Container>
       <Title order={1} align="center" mt={30}>
         Projects
