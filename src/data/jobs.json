@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Database Administrator",
+    "company": "California State University, Monterey Bay",
+    "location": "Monterey Bay, CA",
+    "dates": "March 2023 - Present",
+    "description": "As a Database Administrator, I leverage my diverse skill set to manage Oracle databases and servers, optimizing performance, enhancing security, and collaborating with various teams to support campus operations. This role allows me to enrich the university community with my expertise."
+  },
+  {
+    "title": "Senior Frontend Developer",
+    "company": "Titan.io",
+    "location": "Remote",
+    "dates": "February 2022 - March 2023",
+    "description": "At Titan.io, I spearheaded the development of marketing pages for Lumerin Hashpower Marketplace's beta launch. My cross-functional collaboration with marketing and engineering teams contributed to over 12,000 signups in the first week. I also redesigned and upgraded the Lumerin Wallet's user interface, culminating in a significantly enhanced user experience and a stronger brand visual identity."
+  },
+  {
+    "title": "Software Developer",
+    "company": "California State University, Monterey Bay",
+    "location": "Seaside, CA",
+    "dates": "October 2019 - February 2022",
+    "description": "During my tenure at CSU Monterey Bay, I contributed to various full-stack projects aimed at enriching the campus experience. I designed and developed a user-friendly dashboard for prospective students, streamlined the application process, and collaborated with UX designers to revamp the campus website."
+  }
+]

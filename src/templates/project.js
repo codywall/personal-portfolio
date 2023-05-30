@@ -1,32 +1,35 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
+import { Container, Title } from '@mantine/core';
 import Layout from '../components/layout';
-import Footer from '../components/footer';
-import SEO from '../components/seo';
+import SEO from '../utils/SEO';
 
-export default function Template({ data }) {
+const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <div>
-        <h1>{frontmatter.title}</h1>
+      <Container size="sm" mt={50}>
+        <Title order={1} mb={10}>
+          {frontmatter.title}
+        </Title>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
-      <Footer />
+      </Container>
     </Layout>
   );
-}
+};
 
-export const pageQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+export const projectQuery = graphql`
+  query ProjectByPath($slug: String!) {
+    markdownRemark(frontmatter: { path: { eq: $slug } }) {
       html
       frontmatter {
-        slug
+        path
         title
       }
     }
   }
 `;
+
+export default ProjectTemplate;
