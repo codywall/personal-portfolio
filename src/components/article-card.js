@@ -17,7 +17,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-function ArticleCard({ image, title, date }) {
+function ArticleCard({ image, title, date, link }) {
   const { classes } = useStyles();
   const dateString = date;
   const rawDate = new Date(dateString);
@@ -25,7 +25,7 @@ function ArticleCard({ image, title, date }) {
   const formattedDate = rawDate.toLocaleDateString('en-US', options);
 
   return (
-    <Card key={title} p="md" radius="md" component="a" href="#" className={classes.card}>
+    <Card key={title} p="md" radius="md" component="a" href={link} className={classes.card}>
       <GatsbyImage aspectRatio={16 / 9} image={image} alt={title} />
       <Text color="dimmed" size="xs" transform="uppercase" weight={700} mt="md">
         {formattedDate}

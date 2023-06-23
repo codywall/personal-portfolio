@@ -94,6 +94,7 @@ const IndexPage = ({ data }) => {
                 image={post.featuredImage.childImageSharp.gatsbyImageData} //this doesn't work
                 date={post.date}
                 key={post.title}
+                link={post.path}
               />
             ))}
           </SimpleGrid>
