@@ -1,0 +1,96 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #000;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 32px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 0;
+    }
+}
+
+main {
+    text-align: center;
+    width: min(95%, 1100px);
+}
+
+h1 {
+    font-family: "Alfa Slab One", Rockwell, serif;
+    font-size: clamp(150px, 28vw, 320px);
+    line-height: 0.72;
+    margin: 0 0 28px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+}
+
+@media (max-width: 700px) {
+    h1 {
+        line-height: 0.68;
+        letter-spacing: -0.08em;
+        margin-bottom: 28px;
+    }
+}
+
+.tagline {
+    font-family: Arial Black, Helvetica, Arial, sans-serif;
+    font-size: clamp(34px, 4.8vw, 68px);
+    line-height: 0.9;
+    margin: 0 auto;
+    font-weight: 900;
+    max-width: 760px;
+    letter-spacing: -0.05em;
+}
+
+nav {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+@media (max-width: 700px) {
+    nav {
+        width: min(100%, 420px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav a {
+        flex: 0 0 calc(50% - 7px);
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    border: 4px solid #000;
+    padding: 12px 18px;
+    font-family: Arial Black, Helvetica, Arial, sans-serif;
+    font-size: clamp(18px, 2vw, 28px);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    box-shadow: 6px 6px 0 #000;
+}
+
+a:hover {
+    background: #000;
+    color: #f5f5f5;
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 #000;
+}
