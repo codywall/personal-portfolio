@@ -2,6 +2,7 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     background: #f5f5f5;
     color: #000;
+    overflow-x: hidden;
 }
 
 body {
@@ -11,18 +12,13 @@ body {
     place-items: center;
     padding: 32px;
     box-sizing: border-box;
-    width: 100%;
-}
-
-@media (max-width: 700px) {
-    body {
-        padding: 0;
-    }
+    overflow-x: hidden;
 }
 
 main {
     text-align: center;
-    width: min(95%, 1100px);
+    width: min(95vw, 1100px);
+    min-width: 0;
 }
 
 h1 {
@@ -33,14 +29,6 @@ h1 {
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: -0.06em;
-}
-
-@media (max-width: 700px) {
-    h1 {
-        line-height: 0.68;
-        letter-spacing: -0.08em;
-        margin-bottom: 28px;
-    }
 }
 
 .tagline {
@@ -61,20 +49,6 @@ nav {
     gap: 14px;
 }
 
-@media (max-width: 700px) {
-    nav {
-        width: min(100%, 420px);
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    nav a {
-        flex: 0 0 calc(50% - 7px);
-        text-align: center;
-        box-sizing: border-box;
-    }
-}
-
 a {
     color: #000;
     text-decoration: none;
@@ -86,11 +60,58 @@ a {
     text-transform: uppercase;
     letter-spacing: -0.04em;
     box-shadow: 6px 6px 0 #000;
+    box-sizing: border-box;
+
+    transition:
+        transform 80ms steps(2),
+        box-shadow 80ms steps(2),
+        background-color 80ms linear,
+        color 80ms linear;
 }
 
-a:hover {
+a:hover,
+a:focus-visible,
+a:active {
     background: #000;
     color: #f5f5f5;
-    transform: translate(3px, 3px);
-    box-shadow: 3px 3px 0 #000;
+    transform: translate(6px, 6px);
+    box-shadow: 0 0 0 #000;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        width: 100vw;
+        max-width: 100vw;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: clamp(110px, 25vw, 170px);
+        line-height: 0.72;
+        letter-spacing: -0.08em;
+        margin: 0 auto 24px;
+        max-width: 100vw;
+    }
+
+    .tagline {
+        font-size: clamp(40px, 11vw, 52px);
+        max-width: 95vw;
+    }
+
+    nav {
+        width: calc(100vw - 32px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav a {
+        flex: 0 0 calc(50% - 14px);
+        min-width: 0;
+        text-align: center;
+    }
 }
