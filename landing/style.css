@@ -91,7 +91,7 @@ a:active {
     }
 
     h1 {
-        font-size: clamp(110px, 25vw, 170px);
+        font-size: clamp(115px, 25vw, 170px);
         line-height: 0.72;
         letter-spacing: -0.08em;
         margin: 0 auto 24px;
@@ -99,7 +99,7 @@ a:active {
     }
 
     .tagline {
-        font-size: clamp(40px, 11vw, 52px);
+        font-size: clamp(22px, 8vw, 52px);
         max-width: 95vw;
     }
 
